@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Central Valley Florist</title>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var curMessage="message1";
+var changeMessage;
+function adMessage() {
+      if (curMessage == "message1") {
+            document.advertising.message.value
+                  = "Place your Valentines Day orders today!";
+            curMessage = "message1";
+      }
+      else
+            document.advertising.message.value
+                  = "All orders must be received by February 12th!";
+            curMessage = "message1";
+}
+/* ]]> */
+</script>
+</head>
+<body onload="var changeQuote=setInterval('adMessage()',2000);">
+<h1>Central Valley Florist</h1>
+<h2>Valentines Day Specials</h2>
+<form action="" name="advertising">
+<p><input type="text" name="message" size="60"
+value="Place your Valentines Day orders today!" /></p>
+</form>
+</body>
+</html>

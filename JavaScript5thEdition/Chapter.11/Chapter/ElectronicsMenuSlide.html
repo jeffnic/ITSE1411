@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DRG Electronics</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="menustyle.css" />
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        var audioPosition = -76;
+        var audioSlider;
+        function showAudio() {
+            clearInterval(audioSlider);
+            audioSlider = setInterval("showAudioMenu()", 10);
+        }
+        function showAudioMenu() {
+            if (audioPosition < 36) {
+                audioPosition = audioPosition + 2;
+                document.getElementById("audio").style.top = audioPosition + "px";
+            }
+            document.getElementById("audio").style.zIndex = 1;
+        }
+        function hideAudio() {
+            clearInterval(audioSlider);
+            audioSlider = setInterval("hideAudioMenu()", 10);
+        }
+        function hideAudioMenu() {
+            if (audioPosition > -75) {
+                audioPosition = audioPosition - 2;
+                document.getElementById("audio").style.top = audioPosition + "px";
+            }
+            document.getElementById("audio").style.zIndex = -1;
+        }
+
+
+
+
+        var videoPosition = -76;
+        var videoSlider;
+        function showVideo() {
+            clearInterval(videoSlider);
+            videoSlider = setInterval("showVideoMenu()", 10);
+        }
+        function showVideoMenu() {
+            if (videoPosition < 36) {
+                videoPosition = videoPosition + 2;
+                document.getElementById("video").style.top = videoPosition + "px";
+            }
+            document.getElementById("video").style.zIndex = 1;
+        }
+        function hideVideo() {
+            clearInterval(videoSlider);
+            videoSlider = setInterval("hideVideoMenu()", 10);
+        }
+        function hideVideoMenu() {
+            if (videoPosition > -75) {
+                videoPosition = videoPosition - 2;
+                document.getElementById("video").style.top = videoPosition + "px";
+            }
+            document.getElementById("video").style.zIndex = -1;
+        }
+
+
+        var computersPosition = -76;
+        var computersSlider;
+        function showComputers() {
+            clearInterval(computersSlider);
+            computersSlider = setInterval("showComputersMenu()", 10);
+        }
+        function showComputersMenu() {
+            if (computersPosition < 36) {
+                computersPosition = computersPosition + 2;
+                document.getElementById("computers").style.top = computersPosition + "px";
+            }
+            document.getElementById("computers").style.zIndex = 1;
+        }
+        function hideComputers() {
+            clearInterval(computersSlider);
+            computersSlider = setInterval("hideComputersMenu()", 10);
+        }
+        function hideComputersMenu() {
+            if (computersPosition > -75) {
+                computersPosition = computersPosition - 2;
+                document.getElementById("computers").style.top = computersPosition + "px";
+            }
+            document.getElementById("computers").style.zIndex = -1;
+        }
+
+
+        var camerasPosition = -76;
+        var camerasSlider;
+        function showCameras() {
+            clearInterval(camerasSlider);
+            camerasSlider = setInterval("showCamerasMenu()", 10);
+        }
+        function showCamerasMenu() {
+            if (camerasPosition < 36) {
+                camerasPosition = camerasPosition + 2;
+                document.getElementById("cameras").style.top = camerasPosition + "px";
+            }
+            document.getElementById("cameras").style.zIndex = 1;
+        }
+        function hideCameras() {
+            clearInterval(camerasSlider);
+            camerasSlider = setInterval("hideCamerasMenu()", 10);
+        }
+        function hideCamerasMenu() {
+            if (camerasPosition > -75) {
+                camerasPosition = camerasPosition - 2;
+                document.getElementById("cameras").style.top = camerasPosition + "px";
+            }
+            document.getElementById("cameras").style.zIndex = -1;
+        }
+
+
+
+
+
+
+        /* ]]> */
+    </script>
+
+</head>
+<body>
+    <table style="background-color: White">
+        <tr align="left">
+            <td valign="top" onmouseover="document.getElementById('b1').src='button1over.png'; showAudio()"
+                onmouseout="document.getElementById('b1').src='button1up.png'; hideAudio()"><a href="">
+                    <img src="button1up.png" id="b1" border="0" vspace="1" hspace="1" /></a>
+                <div id="audio" class="dropmenu" style="position: absolute; top: -76px; z-index: -1">
+                    <ul>
+                        <li><a href="audiosys.html">Audio Systems</a></li>
+                        <li><a href="audioplayers.html">iPods and MP3 Players</a></li>
+                        <li><a href="headphones.html">Headphones</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td onmouseover="document.getElementById('b2').src='button2over.png'; showVideo()"
+                onmouseout="document.getElementById('b2').src='button2up.png'; hideVideo()"><a href="">
+                    <img src="button2up.png" id="b2" border="0" vspace="1" hspace="1" /></a>
+                <div id="video" class="dropmenu" style="position: absolute; top: -76px; z-index: -1">
+                    <ul>
+                        <li><a href="audiosys.html">Televisions</a></li>
+                        <li><a href="hometheater.html">Home Theater Systems</a></li>
+                        <li><a href="videoplayers.html">Blue-ray and DVD Players</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td onmouseover="document.getElementById('b3').src='button3over.png'; showComputers()"
+                onmouseout="document.getElementById('b3').src='button3up.png'; hideComputers()">
+                <a href="">
+                    <img src="button3up.png" id="b3" border="0" vspace="1" hspace="1" /></a>
+                <div id="computers" class="dropmenu" style="position: absolute; top: -76px; z-index: -1">
+                    <ul>
+                        <li><a href="laptops.html">Laptops</a></li>
+                        <li><a href="netbooks.html">Netbooks</a></li>
+                        <li><a href="desktops.html">Desktops</a></li>
+                        <li><a href="monitors.html">Monitors</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td onmouseover="document.getElementById('b4').src='button4over.png'; showCameras()"
+                onmouseout="document.getElementById('b4').src='button4up.png'; hideCameras()"><a
+                    href="">
+                    <img src="button4up.png" id="b4" border="0" vspace="1" hspace="1" /></a>
+                <div id="cameras" class="dropmenu" style="position: absolute; top: -76px; z-index: -1">
+                    <ul>
+                        <li><a href="digital.html">Digital Camers</a></li>
+                        <li><a href="camcorders.html">Camcorders</a></li>
+                        <li><a href="lenses.html">Lenses</a></li>
+                        <li><a href="memory.html">Memory Cards</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <h1>
+        DRG Electronics</h1>
+    <p>
+        Use the menu to help find what you are looking for.</p>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Move Estimator</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <link href="text.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var mileageCost = 0;
+    var laborCost = 0;
+    var flightsCost = 0;
+    var appliancesCost = 0;
+    var pianosCost = 0;
+    function calcMileageCost(miles) {
+	    mileageCost = miles * 1.25;
+	    calcTotalEstimate();
+    }
+    function calcLaborCost(pounds) {
+	    laborCost = pounds * .15;
+	    calcTotalEstimate();
+    }
+    function calcFlightsCost(flights) {
+	    flightsCost = flights * 50;
+	    calcTotalEstimate();
+    }
+    function calcAppliancesCost(appliances) {
+	    appliancesCost = appliances * 25;
+	    calcTotalEstimate();
+    }
+    function calcPianosCost(pianos) {
+	    pianosCost = pianos * 35;
+	    calcTotalEstimate();
+    }
+    function calcTotalEstimate() {
+	    var total = mileageCost;
+	    total += laborCost;
+	    total += flightsCost;
+	    total += appliancesCost;
+	    total += pianosCost;
+	    document.forms[0].total.value = "$" + total.toLocaleString();
+	}
+
+	function validateInput(keyPressEvent) {
+	    if (navigator.appName == "Microsoft Internet Explorer")
+	        var enteredKey = keyPressEvent.keyCode;
+	    else if (navigator.appName == "Netscape")
+	        var enteredKey = keyPressEvent.charCode;
+	    var enteredChar = String.fromCharCode(enteredKey);
+	    var retValue = true;
+	    try {
+	        if (!/\d/.test(enteredChar) && !/\W/.test(enteredChar))
+	            throw "You did not enter a numeric value.";
+	    }
+	    catch (inputError) {
+	        window.alert(inputError);
+	        retValue = false;
+	    }
+	    finally {
+	        return retValue;
+	    }
+	}
+
+    /* ]]> */
+    </script>
+</head>
+<body>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td height="77" style="background-image: url('images/top01bg.gif'); background-repeat: repeat-x">
+                <table width="770" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="194" height="77" align="center" valign="middle" style="background-image: url('images/top01.gif')">
+                            <table width="120" border="0" cellspacing="0" cellpadding="0">
+                                <tr align="center">
+                                    <td>
+                                        <img src="images/icon01.gif" width="33" height="29" alt="Visual formatting image" />
+                                    </td>
+                                    <td>
+                                        <img src="images/icon02.gif" width="33" height="29" alt="Visual formatting image" />
+                                    </td>
+                                    <td>
+                                        <img src="images/icon03.gif" width="33" height="29" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="92">
+                            <img src="images/but01.gif" width="92" height="77" alt="Visual formatting image" />
+                        </td>
+                        <td width="238">
+                            <img src="images/top02.gif" width="238" height="77" alt="Visual formatting image" />
+                        </td>
+                        <td width="246">
+                            <img src="images/logo.jpg" width="246" height="77" alt="Visual formatting image" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="304" align="left" valign="top" style="background-image: url('images/bluebg2.gif')">
+                <table width="770" border="0" cellpadding="0" cellspacing="0" class="text">
+                    <tr>
+                        <td width="194" align="left" valign="top">
+                            <table width="194" border="0" cellpadding="0" cellspacing="0" class="text">
+                                <tr>
+                                    <td width="194" height="153" align="center" style="background-image: url('images/memberbg.gif')">
+                                        <table width="180" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td align="center">
+                                                    <img src="images/memberlogin.gif" width="173" height="21" vspace="4" alt="Visual formatting image" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table width="160" border="0" cellpadding="4" cellspacing="0" class="text">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="images/userid.gif" width="52" height="13" alt="Visual formatting image" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><font color="#3C3C3C">
+                                                                <input name="textfield222" type="text" class="text" size="23" />
+                                                            </font></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><font color="#3C3C3C">
+                                                                <input name="textfield2222" type="text" class="text" size="23" />
+                                                            </font></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="images/summit.gif" width="60" height="18" alt="Visual formatting image" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="151" align="center" valign="top" style="background-image: url('images/supportbg.gif')">
+                                        <table width="190" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td align="center">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <img src="images/supportservice.gif" width="173" height="20" vspace="0" alt="Visual formatting image" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <table width="170" border="0" cellpadding="0" cellspacing="0" class="text">
+                                                        <tr>
+                                                            <td><font color="002460">CV Movers is America's top mover. It's a position we take great
+                                                                pride in because it came about by truly serving our customers like no other van
+                                                                line in the industry. </font>
+                                                                <img src="images/more_brown.gif" width="44" height="12" alt="Visual formatting image" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="92" align="left" valign="top">
+                            <table width="92" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <img src="images/but01_.gif" width="92" height="25" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/but02.gif" width="92" height="82" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/but03.gif" width="92" height="77" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/but04.gif" width="92" height="76" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/butend.gif" width="92" height="44" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="484" height="304" align="center" valign="top" style="background-image: url('images/bluebg.gif')">
+                            <table width="474" border="0" cellpadding="0" cellspacing="0" class="text">
+                                <tr>
+                                    <td height="6" colspan="2">
+                                        <img src="images/spacer.gif" width="50" height="6" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/packingtips1.gif" width="156" height="38" alt="Visual formatting image" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="156" height="99">
+                                        <img src="images/pic05.gif" width="156" height="99" alt="Visual formatting image" />
+                                    </td>
+                                    <td width="318" align="center" style="background-image: url('images/packingbg.gif')">
+                                        <table width="314" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td><strong>Pack books</strong> either flat or with the spine touching the bottom of
+                                                    the carton. Do not pack with spine facing up, as glue can break away from the binder.
+                                                    Pack books of the same general size together.</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="474" border="0" cellpadding="0" cellspacing="0" class="text">
+                                <tr>
+                                    <td height="6" colspan="2">
+                                        <img src="images/spacer.gif" width="50" height="6" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/packingtips2.gif" width="156" height="38" alt="Visual formatting image" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td width="156" height="99">
+                                        <img src="images/pic06.gif" width="156" height="99" alt="Visual formatting image" />
+                                    </td>
+                                    <td width="318" align="center" style="background-image: url('images/packingbg.gif')">
+                                        <table width="314" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td><strong>Special products shipments</strong>. Contact the agent that booked your
+                                                    shipment regarding the delay. Your shipment could be eligible for a 25% service
+                                                    guarantee refund of the billable linehaul charges.</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top" style="background-image: url('images/brownbg2.gif')">
+                <table width="770" border="0" cellpadding="0" cellspacing="0" class="text">
+                    <tr>
+                        <td width="194" align="center" valign="top" style="background-image: url('images/sidebluebg.gif')">
+                            <table width="190" border="0" cellpadding="0" cellspacing="0" class="text">
+                                <tr>
+                                    <td align="center">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <img src="images/recenthappenings.gif" width="173" height="20" vspace="0" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <table width="170" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td><font color="002460">The Federal Motor Carrier Safety Administration's (FMCSA) consumer
+                                                    protection regulations contain the rules that must be followed when we provide interstate
+                                                    transportation of household goods services to our customer. </font>
+                                                    <img src="images/more_blue.gif" width="44" height="12" alt="Visual formatting image" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <img src="images/pic02.gif" width="145" height="129" vspace="4" alt="Visual formatting image" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="576" align="center" valign="top" style="background-image: url('images/brownbg.gif')">
+                            <br />
+                            <table width="520" border="0" cellpadding="0" cellspacing="0" class="text">
+                                <tr valign="top">
+                                    <td align="right">
+                                        <table width="450" border="0" cellpadding="0" cellspacing="0" class="text">
+                                            <tr>
+                                                <td width="186">
+                                                    <img src="images/estimate.jpg" width="133" height="18" vspace="2" alt="Visual formatting image" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr align="center">
+                                                <td>
+                                                    <form action="" method="get" enctype="application/x-www-form-urlencoded">
+                                                    <table border="0">
+                                                        <tr>
+                                                            <td>Distance in Miles</td>
+                                                            <td>
+                                                                <input name="miles" type="text" onblur="calcMileageCost(this.value);" onkeypress="return validateInput(event)" />
+                                                                ($1.25 per mile)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Weight in Pounds</td>
+                                                            <td>
+                                                                <input name="pounds" type="text" onblur="calcLaborCost(this.value);" />
+                                                                (.15 per pound)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. of Flights</td>
+                                                            <td>
+                                                                <input name="flights" type="text" onblur="calcFlightsCost(this.value);" onkeypress="return validateInput(event)" />
+                                                                ($50 per flight)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. of Appliances</td>
+                                                            <td>
+                                                                <input name="appliances" type="text" onblur="calcAppliancesCost(this.value);" onkeypress="return validateInput(event)" />
+                                                                ($25 per appliance)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>No. of Pianos</td>
+                                                            <td>
+                                                                <input name="pianos" type="text" onblur="calcPianosCost(this.value);" onkeypress="return validateInput(event)" />
+                                                                ($35 per piano)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>Moving Estimate</strong></td>
+                                                            <td>
+                                                                <input name="total" type="text" onfocus="this.blur()" onkeypress="return validateInput(event)" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="50" style="background-image: url('images/bottombg.gif')">
+                <table width="770" border="0" cellpadding="0" cellspacing="0" style="background-image: url('images/bottom01.gif')"
+                    class="text">
+                    <tr>
+                        <td align="center">
+                            <table width="550" border="0" cellpadding="3" cellspacing="0" bgcolor="#FFFFFF" class="text">
+                                <tr>
+                                    <td align="center"><font color="#333333">&copy; 2010 CV Movers, Inc. All rights reserved.</font>
+                                        <font color="#003399"><strong>Terms of Use and Disclaimer</strong></font></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

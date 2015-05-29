@@ -1,0 +1,78 @@
+BODY {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	BACKGROUND-COLOR:#CA3435;
+}
+TD {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+}
+
+#foot{
+	FONT-SIZE: 9px;
+	COLOR: #F3CBA7;
+	TEXT-ALIGN:center;
+	PADDING-LEFT:200px;
+}
+
+#params{
+	FONT-SIZE: 10px;
+	COLOR: #F0C3C3;
+}
+
+H1 {
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	MARGIN-BOTTOM: 0px;
+	MARGIN-TOP: 10px;
+}
+P{
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-INDENT: 0px;
+	MARGIN-LEFT: 0px;
+	MARGIN-RIGHT:0px;
+	MARGIN-TOP: 0px;
+	MARGIN-BOTTOM: 10px;
+}
+INPUT{
+	FONT-SIZE: 11px;
+	COLOR: #000;
+}
+TEXTAREA{
+	FONT-SIZE: 11px;
+	COLOR: #000;
+}
+UL	{
+	MARGIN-TOP:0px;
+	MARGIN-BOTTOM:0px;
+}
+LI {
+	FONT-SIZE: 11px;
+	MARGIN-BOTTOM:0px;
+	MARGIN-TOP:0px;
+	TEXT-INDENT: 0px;
+	LINE-HEIGHT: 13px;
+	LIST-STYLE-TYPE:none;
+	LIST-STYLE-IMAGE:url(i/li.gif);
+}
+A, A:active, A:visited{
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION:underline;
+}
+A:hover{
+	FONT-SIZE: 11px;
+	TEXT-DECORATION:none;
+}
+#foot A, #foot A:active, #foot A:visited{
+	FONT-SIZE: 9px;
+	COLOR: #F3CBA7;
+	TEXT-DECORATION:underline;
+}
+#foot A:hover{
+	FONT-SIZE: 9px;
+	TEXT-DECORATION:none;
+}

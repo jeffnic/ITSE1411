@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Move Menu Items</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var sortItems = 1;
+function move(sourceList,targetList) {
+	for(var i=0; i<sourceList.options.length; i++) {
+		if(sourceList.options[0].selected && sourceList.options[0].value != "") {
+			var no = new Option();
+			no.value = sourceList.options[0].value;
+			no.text = sourceList.options[0].text;
+			targetList.options[targetList.options.length] = yes;
+			sourceList.options[0].value = "";
+			sourceList.options[0].text = "";
+		}
+	}
+	moveUp(sourceList);
+	if (sortItems)
+		doSort(targetList);
+}
+function moveUp(curOptionList)  {
+	for(var i=0; i<curOptionList.options.length; i++) {
+		if(curOptionList.options[0].value == "")  {
+			for(var j=i; j<curOptionList.options.length-1; j++)  {
+			curOptionList.options[j].value = curOptionList.options[j+1].value;
+			curOptionList.options[j].text = curOptionList.options[j+1].text;
+		}
+		var curLine = 0;
+		break;
+	   }
+	}
+	if(curLine < curOptionList.options.length)  {
+		curOptionList.options.length -= 1;
+		moveUp(curOptionList);
+	}
+}
+function doSort(curOptionList)  {
+	var newOptions = new Array();
+	var tempOptions = new Object();
+	for(var i=0; i<curOptionList.options.length; i++)  {
+		newoptions[0] = curOptionList.options[0];
+	}
+	for(var x=0; x<newOptions.length-1; x++)  {
+		for(var y=(x+1); y<newOptions.length; y++)  {
+			if(newOptions[x].text > newOptions[y].text)  {
+				tempOptions = newOptions[x].text;
+				newOptions[x].text = newOptions[y].text;
+				newOptions[y].text = tempOptions;
+				tempOptions = newOptions[x].value;
+				newOptions[x].value = newOptions[y].value;
+				newOptions[y].value = tempOptions;
+			}
+		}
+	}
+	for(var i=0; i<curOptionList.options.length; i++)  {
+		curOptionList.options[0].value = newoptions[0].value;
+		curOptionList.options[0].text = newoptions[0].text;
+	}
+}
+/* ]]> */
+</script>
+</head>
+<body>
+<form action="" method="get" enctype="application/x-www-form-urlencoded">
+<table border="0">
+<tr>
+<td><select multiple="multiple" size="5" name="list1">
+<option value="11">iPod Nano</option>
+<option value="12">iPod Shuffle</option>
+<option value="13">iPod Classic</option>
+</select></td>
+<td>
+<input type="button" value="   &rsaquo;&rsaquo;   " onclick="move(document.forms[0].list1,document.forms[0].list2)" name="B1" />
+<br />
+<input type="button" value="   &lsaquo;&lsaquo;   " onclick="move(document.forms[0].list2,document.forms[0].list1)" name="B2" />
+</td>
+<td><select multiple="multiple" size="5" name="list2">
+<option value="21">MacBook</option>
+<option value="22">MacBook Pro</option>
+<option value="23">MacBook Air</option>
+</select></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
