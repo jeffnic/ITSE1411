@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Lab Contact Information 
+    </title>    
+    <meta charset="utf-8" />
+<link href="schedule.css" rel="stylesheet" type="text/css"/>
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+
+// your JavaScript instructions will go here
+
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body>
+    
+<header>
+    <h1>Lab Inventory</h1>
+</header>
+     
+     
+ <div> 
+<!-- Your XHTML here -->
+<nav>
+    <ul>
+        <li><a href="home.htm">Home</a></li>
+        <li><a href="servers.htm">Servers</a></li>
+        <li><a href="laptops.htm">Laptops</a></li>
+        <li><a href="desktops.htm">Desktops</a></li>
+        <li><a href="storage.htm">Storage</a></li>
+        <li><a href="switches.htm">Switches</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="schedule.htm">Schedules</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+    </ul>
+    
+</nav>
+<h2>Lab Contact Information</h2>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+var contactNames = new Array("Calvin Hill", "Marge Simpson", "Martin Truex", "Victoria Smith", "James Bond", "Adam Sandler")
+var contactTitle = new Array("Lab Manager", "Asst Lab Manager", "Team Lead", "Admin", "Admin", "Purchasing")
+var contactPhone = new Array("(512) 555-2547", "(512) 555-2564", "(512) 555-2564", "(512) 555-2254", "(512) 555-0805", "(281) 555-1024")
+var contactSpecialty = new Array("Lab Mgmt", "Lab Mgmt", "Servers & Storage", "Servers & Desktops", "Laptops & Switches", "Purchasing","BackGammon")
+var contactEmail = new Array("Calvin@lab.lab", "Marge@lab.lab", "Martin@lab.lab", "Victoria@lab.lab", "James@lab.lab", "Adam@lab.lab")
+document.write("<table>");
+document.write("<th>Name</th><th>Position</th><th>Phone Number</th><th>Email Address</th><th>Specialty</th>");
+for (i = 0; i < contactNames.length; i++) {
+    document.write("<tr><td>" + contactNames[i] + "</td>", "<td>" + contactTitle[i] + "</td>", "<td>" + contactPhone[i] + "</td>", "<td>" + contactEmail[i] + "</td>", "<td>" + contactSpecialty[i] + "</td></tr>");
+}
+
+/*
+document.write("<tr><td>" + contactNames[0] + "</td>", "<td>" + contactTitle[0] + "</td>", "<td>"+ contactPhone[0] + "</td>", "<td>" + contactSpecialty[0] + "</td></tr>");
+document.write("<tr><td>" + contactNames[1] + "</td>", "<td>" + contactTitle[1] + "</td>", "<td>"+ contactPhone[1] + "</td>", "<td>" + contactSpecialty[1] + "</td></tr>");
+*/
+document.write("</table>");
+/* ]]> */
+
+</script>
+
+
+
+
+<p>
+    Email the lab admins if you have any problems or questions.
+</p>
+
+<!-- external javascript for validation -->  
+<div id="script">
+<script type="text/javascript" src="../validation.js">
+</script>
+</div>
+
+ </div>
+ 
+<div class="footer">
+ <footer>Confidential</footer>
+</div>
+
+  </body>
+  </html>

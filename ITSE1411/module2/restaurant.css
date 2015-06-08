@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+    background:url('images/checkered3.jpg');
+    color: #112E45;
+    height: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #112E45;
+}
+
+p {
+    color: #112E45;
+    
+}
+
+nav {
+    display: block;  
+    float: left;
+    width: 120px;
+    margin: 10px;
+    padding: 0px;
+    letter-spacing:0.1em;
+    font-weight: bold;
+    background: #FFF7AA;
+}
+ nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px;
+    border: groove;
+    border-width: medium; 
+}
+
+nav a {
+    text-decoration: none; 
+}
+
+nav a:link {
+    color: #003333;
+}
+
+nav a:visited {
+    color: #004d4d;
+}
+
+nav a:hover {
+    color: #B9E397;
+}
