@@ -57,3 +57,36 @@ nav a:visited {
 nav a:hover {
     color: #B9E397;
 }
+
+table, td {
+    margin-left: 50px;
+    border: 1px solid #003333;
+    border-collapse: collapse;
+    width: 60%;
+    padding: 5px;
+    width: auto;
+}
+
+th {
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: #FFF7AA;
+    color: #121212;
+    padding: 10px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    min-width: 850px;
+    }
+    
+#leftcolumn {
+    float: left;
+    width: 150px;
+}
+
+#rightcolumn {
+    margin-left: 155px;
+
+}
