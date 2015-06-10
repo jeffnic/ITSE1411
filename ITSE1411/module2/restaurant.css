@@ -7,7 +7,9 @@ h1 {
 
 h2 {
     text-align: center;
+    background:url('images/checkered3.jpg');
     color: #112E45;
+    height: 50px;
 }
 
 h3 {
@@ -17,6 +19,18 @@ h3 {
 
 p {
     color: #112E45;
+}
+
+footer {
+    position: relative;
+    margin-left: 10px;
+    width: 95%;
+    text-align: left;
+    background: #FFF7AA;
+    color: #112E45;
+    border: solid;
+    border-width: 1px;
+    margin-left: 10px;
     
 }
 
@@ -90,3 +104,4 @@ th {
     margin-left: 155px;
 
 }
+
