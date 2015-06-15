@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Browser Object Model Chapter 4 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+ol.roman{list-style-type:upper-roman;}
+ol.lalpha{list-style-type:lower-alpha;}
+ol.lroman{list-style-type:lower-roman;}
+</style>
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS BOM Chapter 4 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ol>
+    <li>The Browser Object Model (BOM) is used to Control the web browser.  Objects in the BOM are used to access either the window
+        object or the document object.  See Figure 4-1 on page 191.
+      <ol class="lalpha">
+            <li>Use methods and properties of the document object to control the web page.
+               <ul>
+                  <li>The write() and writeln() methods refer to the document object.</li>
+                  <li>All elements on a web page are contained in the document object and are represented in JavaScript by its own object.</li>
+                  <li>When coding the object name, always use lowercase letter.</li>
+                  <li>Some objects represent arrays.  The array elements are assigned in the order that they appear on the page.</li>
+                  <li>Some objects can be referenced by name as well as through its array.  For example, the first image on a page would
+                      be referenced in JavaScript as document.images[0]</li>
+               </ul>
+            </li>
+            <li>Use method and properties of the window object to control the browser window.
+               <ul>
+                  <li>Window object properties and window object methods are listed in tables 4-1 and 4-2 pages 197 and 198.</li>
+                  <li>The self property an be used the same as the window property, for example:<br />
+                      window.alert("Your order has been received.");<br />
+                      self.alert("Your order has been received.");<br />
+                      and in most browsers, the following works:<br />
+                      alert("Your order has been received.");</li>
+               </ul></li>
+            <li>Events, when executed, allows coding to change the properties of an object.
+               <ol>
+                  <li>The click and dblclick events.
+                     <ul>
+                        <li>The anchor event is associated with the anchor element.  When a link is clicked the
+                            onclick event handler automatically is called.</li>
+                        <li>The onclick even handler can be overridden in the anchor element by coding onclick().  The result
+                            of the written onclick returns a true or false to determine if the automatic call occurs.</li>
+                        <li>The dblclick and the click event work the same.  Double clicks are not used as often as single clicks.</li>
+                     </ul></li>
+                  <li>The mouseover and mouseout events.
+                     <ul>
+                        <li>A rollover occurs when the mouse moves over an element.  The mouseover occurs when the mouse is over the element.
+                            The mouseout occurs when the mouse is no longer over the element.</li>
+                     </ul>
+                  </li>
+                  <li>The mousedown and mouseup events.
+                     <ul>
+                        <li>A mousedown occurs when the mouse points to an element and the mouse button is held down.  The mouseup occurs when
+                            the mouse button is released.</li>
+                     </ul>
+                  </li> 
+               </ol></li>
+            <li>Event examples this.style reference and defaultStatus property
+              <ol>
+                  <li>When you want to change the CSS of the element using a rollover, use the this.style reference.  CSS properties
+                      written with a hyphen, are written in JavaScript without the hyphen and the second word with uppercase (camel casing) format.
+                      for example font-face is fontFace.</li>
+                  <li>The defaultStatus does not work on all browsers.  To change the status bar in browsers that recognize the change use
+                       window.defaultStatus = "some string";</li>
+                  
+              </ol>
+            </li>
+
+      </ol>
+    </li>
+  </ol>  <!-- BOM  -->
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

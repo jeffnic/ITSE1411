@@ -1,0 +1,130 @@
+<!DOCTYPE html >
+<html lang="en" >
+    <head>
+        <title>
+          Lab Inventory :: Order 
+        </title>    
+        <meta charset="utf-8" />
+        <link href="color1.css" rel="stylesheet" type="text/css"/>
+        
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        
+            var cost = new Array();
+            cost["None"] = 0;
+            cost["xxsmall"] = 19;
+            cost["xsmall"] = 21;
+            cost["small"] = 24;
+            cost["medium"] = 26;
+            cost["large"] = 28;
+            cost["xlarge"] = 30;
+            cost["xxlarge"] = 32;
+            cost["xxxlarge"] = 35;
+            cost["xxxlarge"] = 55;
+
+        
+        function calcTotal() {
+            var e = document.getElementById("shirt");
+            var cost = e.options[e.selectedIndex].value;
+            
+            
+            
+            if (cost <25) {
+                var shippingCost = 10.00;
+            }
+            
+            else if (cost >= 25 && cost <= 35) {
+                var shippingCost = 12.50;
+            }
+            else {
+                var shippingCost = cost * .1;
+            }
+            
+            //window.alert("This is typeOf ShippingCost " + typeof(shippingCost));
+            
+            
+            var tax = cost * .08;       /*  already a number */
+            //window.alert("This is typeOf tax " + typeof(tax));
+            //window.alert("This is cost " + cost)
+            
+            //window.alert("This is typeOf cost " + typeof(cost));
+            numCost = parseFloat(cost);
+            //window.alert("This is typeOf numCost " + typeof(numCost));
+
+            var finalCost = parseFloat(numCost + tax + shippingCost).toFixed(2);
+            window.alert("This is finalCost " + "\t$" + finalCost);
+            window.alert("Cost breakdown follows: " + "\n\n" + "Shirt Cost: " + "\t$" + cost + "\n" + "Tax: " + "\t\t$" + tax + "\n" + "Shipping" + "\t$" + shippingCost
+                         +  "\n" + "Total " + "\t\t$"+ finalCost);       
+        }
+        
+        /* ]]> */
+        </script>    
+        
+    </head>
+
+    <body>
+        <header>
+            <h1>Lab Inventory</h1>
+        </header>
+        <div id="wrapper">
+             <div id="leftcolumn">
+                <nav>
+                    <ul>
+                        <li><a href="home.htm">Home</a></li>
+                        <li><a href="servers.htm">Servers</a></li>
+                        <li><a href="laptops.htm">Laptops</a></li>
+                        <li><a href="desktops.htm">Desktops</a></li>
+                        <li><a href="storage.htm">Storage</a></li>
+                        <li><a href="switches.htm">Switches</a></li>
+                        <li><a href="about.htm">About</a></li>
+                        <li><a href="schedule.htm">Schedules</a></li>
+                        <li><a href="order.htm">Order</a></li>
+                        <li><a href="contact.htm">Contact</a></li>
+                    </ul>
+                </nav>
+    
+            </div>    <!-- end left column wrapper-->
+        
+            <div id="rightcolumn">
+                <h2>Welcome to the Lab Ordering Portal!</h2>
+                <h3>Here you can place an order for a cool new t-shirt.</h3>
+
+                <label >T-shirt</label>
+         
+                <select id="shirt" name='shirt' onchange="calcTotal()">
+                <option value="None">Select T-shirt</option>
+                <option value=19>XX-Small ($19)</option>
+                <option value=21>X-Small ($21)</option>
+                <option value=24>Small ($24)</option>
+                <option value=26>Medium ($26)</option>
+                <option value=28>Large ($28)</option>
+                <option value=30>X-Large ($30)</option>
+                <option value=32>XX-Large ($32)</option>
+                <option value=35>XXX-Large ($35)</option>
+                <option value=55>Blanket-Size ($55)</option>
+               </select>
+                
+                <br>
+                <div>
+                    <ul>
+                    <li>To place your order, just select your size and click enter.</li>
+                    <li>All orders are subject to 8% tax.</li>
+                    <li>Orders less than $25 incur a $10 shipping fee.</li>
+                    <li>Orders between $25 and $35 will be charged $12.50 shipping.</li>
+                    <li>Orders over $35 will have 10% added for shipping.</li>
+                    </ul>
+                </div>
+                
+                
+            
+                <!-- external javascript for validation -->  
+<!--                <script type="text/javascript" src="../validation.js"></script>    -->
+            </div>      <!-- end right column div -->
+        </div>          <!-- end wrapper -->
+            
+        <div class="footer">
+         <footer>Confidential</footer>
+        </div>
+
+    </body>
+</html>

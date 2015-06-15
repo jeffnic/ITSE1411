@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Jeff Nichols 
+    </title>    
+    <meta charset="utf-8" />
+
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+var curBanner="../images/backgrd.jpg";
+function changeBanner() {
+    if (curBanner == "../h1server.jpg") {
+        document.images[0].src = "v500tec.gif";
+        curBanner = "backgrd.jpg";
+    }
+    else{
+        document.images[0].src = "showroom.gif";
+        curBanner = "../h1server.jpg"
+    }
+    
+}
+// your JavaScript instructions will go here
+
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body onload="var begin= setInterval('changeBanner()', 2000);">
+   <p><img src="v500tec.gif" height="90px" width="700px" alt="Banner Images"</p> 
+ <div> 
+<!-- Your XHTML here -->
+  
+
+
+
+<!-- external javascript for validation -->  
+<script type="text/javascript" src="../validation.js">
+</script>    
+
+</div>
+  </body>
+  </html>
