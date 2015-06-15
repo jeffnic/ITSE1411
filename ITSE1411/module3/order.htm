@@ -10,25 +10,24 @@
         <script type="text/javascript">
         /* <![CDATA[ */
         
-            var cost = new Array();
-            cost["None"] = 0;
-            cost["xxsmall"] = 19;
-            cost["xsmall"] = 21;
-            cost["small"] = 24;
-            cost["medium"] = 26;
-            cost["large"] = 28;
-            cost["xlarge"] = 30;
-            cost["xxlarge"] = 32;
-            cost["xxxlarge"] = 35;
-            cost["xxxlarge"] = 55;
-
-        
+            //var cost = new Array();
+            //cost["None"] = 0;
+            //cost["xxsmall"] = 19;
+            //cost["xsmall"] = 21;
+            //cost["small"] = 24;
+            //cost["medium"] = 26;
+            //cost["large"] = 28;
+            //cost["xlarge"] = 30;
+            //cost["xxlarge"] = 32;
+            //cost["xxxlarge"] = 35;
+            //cost["xxxlarge"] = 55;
+            //
+            //
         function calcTotal() {
             var e = document.getElementById("shirt");
             var cost = e.options[e.selectedIndex].value;
             
-            
-            
+                        
             if (cost <25) {
                 var shippingCost = 10.00;
             }
@@ -38,22 +37,15 @@
             }
             else {
                 var shippingCost = cost * .1;
-            }
-            
-            //window.alert("This is typeOf ShippingCost " + typeof(shippingCost));
-            
+            }           
             
             var tax = cost * .08;       /*  already a number */
-            //window.alert("This is typeOf tax " + typeof(tax));
-            //window.alert("This is cost " + cost)
-            
-            //window.alert("This is typeOf cost " + typeof(cost));
-            numCost = parseFloat(cost);
-            //window.alert("This is typeOf numCost " + typeof(numCost));
+            var tax2 = parseFloat(tax).toFixed(2)
 
+            numCost = parseFloat(cost);
             var finalCost = parseFloat(numCost + tax + shippingCost).toFixed(2);
-            window.alert("This is finalCost " + "\t$" + finalCost);
-            window.alert("Cost breakdown follows: " + "\n\n" + "Shirt Cost: " + "\t$" + cost + "\n" + "Tax: " + "\t\t$" + tax + "\n" + "Shipping" + "\t$" + shippingCost
+            window.alert("This is the final cost: " + "\t$" + finalCost);
+            window.alert("Cost breakdown follows: " + "\n\n" + "Shirt Cost: " + "\t$" + cost + "\n" + "Tax: " + "\t\t\t$" + tax2 + "\n" + "Shipping" + "\t\t$" + shippingCost
                          +  "\n" + "Total " + "\t\t$"+ finalCost);       
         }
         
