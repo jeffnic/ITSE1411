@@ -1,0 +1,107 @@
+h1 {
+    text-align: center;
+    background:url('images/checkered3.jpg');
+    color: #112E45;
+    height: 50px;
+}
+
+h2 {
+    text-align: center;
+    background:url('images/checkered3.jpg');
+    color: #112E45;
+    height: 50px;
+}
+
+h3 {
+    text-align: center;
+    color: #112E45;
+}
+
+p {
+    color: #112E45;
+}
+
+footer {
+    position: relative;
+    margin-left: 10px;
+    width: 95%;
+    text-align: left;
+    background: #FFF7AA;
+    color: #112E45;
+    border: solid;
+    border-width: 1px;
+    margin-left: 10px;
+    
+}
+
+nav {
+    display: block;
+    float: left;
+    width: 120px;
+    margin: 10px;
+    padding: 0px;
+    letter-spacing:0.1em;
+    font-weight: bold;
+    background: #FFF7AA;
+}
+ nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px;
+    border: groove;
+    border-width: medium; 
+}
+
+nav a {
+    text-decoration: none; 
+}
+
+nav a:link {
+    color: #003333;
+}
+
+nav a:visited {
+    color: #004d4d;
+}
+
+nav a:hover {
+    color: #B9E397;
+}
+
+table, td {
+    margin-left: 50px;
+    border: 1px solid #003333;
+    border-collapse: collapse;
+    width: 60%;
+    padding: 5px;
+    width: auto;
+}
+
+th {
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: #FFF7AA;
+    color: #121212;
+    padding: 10px;
+}
+
+#wrapper {
+    width: 80%;
+    margin: auto;
+    min-width: 850px;
+    }
+    
+#leftcolumn {
+    float: left;
+    width: 150px;
+}
+
+#rightcolumn {
+    margin-left: 155px;
+
+}
+

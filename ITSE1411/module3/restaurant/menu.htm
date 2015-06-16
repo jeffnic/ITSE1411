@@ -1,0 +1,81 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+     Hotrod's :: Menu
+    </title>    
+    <meta charset="utf-8" />
+    <link href="restaurant.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Hotrod's Hot Dogs</h2>
+
+    <div id="wrapper">
+        <div id="leftcolumn">
+            
+            <nav>
+                <ul>
+                    <li><a href="project2.htm">Home</a></li>
+                    <li><a href="menu.htm">Menu</a></li>
+                    <li><a href="catering.htm">Catering</a></li>
+                    <li><a href="specials.htm">Specials</a></li>
+                    <li><a href="locations.htm">Locations</a></li>
+                    <li><a href="hours.htm">Hours</a></li>
+                    <li><a href="about.htm">About</a></li>
+                    <li><a href="survey.htm">Survey</a></li>
+                </ul>
+                    
+            </nav>
+        </div>
+ 
+
+        <div id="rightcolumn">
+            <h3>Menu</h3>     <!-- smaller page title-->
+            <p>
+                Check out the Hotrod menu for daily specials and prices.
+                <br> All orders include french fries and a large drink!
+                <br><br> Daily specials are <strong>15% discount</strong>.
+            </p>
+      
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            
+                var dogPrices = new Array(2.4,5.17,4.99,3.99,2.99);
+            
+                document.write("<table>");
+                document.write("<th>Item</th><th>Price</th><th>Special</th>");
+                document.write("<tr><td>Chicago Style Dog</td><td>",'$',dogPrices[0].toFixed(2),"</td><td>Monday</td></tr>");
+                document.write("<tr><td>Grilled Naked Dog</td><td>",'$',dogPrices[1].toFixed(2),"</td><td>Tuesday</td></tr>");
+                document.write("<tr><td>Southern 'Dragged' Dog</td><td>",'$',dogPrices[2].toFixed(2),"</td><td>Wednesday</td></tr>");
+                document.write("<tr><td>Relish Dog</td><td>",'$',dogPrices[3].toFixed(2),"</td><td>Thursday</td></tr>");
+                document.write("<tr><td>Chili Dog</td><td>",'$',dogPrices[4].toFixed(2),"</td><td>Friday</td></tr>");
+                document.write("</table>");
+                
+                document.write("<img alt='Chicago Style Dog' align='center' height='75' width='100' style='margin:20px 10px', src='images/chicago_style.jpg'>");
+                document.write(" Chicago Dog")
+                document.write("<img alt='Grilled Naked Dog' align='center' height='75' width='100' style='margin:20px 10px', src='images/grilled_naked.jpg'>");
+                document.write(" Grilled, <em>naked</em> Dog<br>")
+                document.write("<img alt='Southern Dragged Dog' align='center' height='75' width='100' style='margin:20px 10px', src='images/southern_dragged.jpg'>");
+                document.write(" <em>Dragged</em> Dog")
+                document.write("<img alt='New York Style Dog' align='center' height='50' width='100' style='margin:20px 10px', src='images/newyork_style.jpg'>");
+                document.write(" New York Dog<br>")
+                document.write("<img alt='Chili Dog' align='center' height='50' width='100' style='margin:20px 10px', src='images/chili_dog.jpg'>");
+                document.write(" Chili Dog<br>")
+                document.write("<br>")
+    
+                /* ]]> */
+            </script>    
+        
+    
+    
+        <!-- external javascript for validation -->  
+        <script type="text/javascript" src="../../validation.js">
+        </script>    
+
+
+        </div>
+    </div>
+    <footer>Hotrod's Hotdogs &copy; 2015 </footer>
+</body>
+</html>

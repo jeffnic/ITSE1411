@@ -1,0 +1,103 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <title>
+      Hotrod's 
+    </title>    
+    <meta charset="utf-8" />
+
+
+ <!-- This is where your link tag goes when linking to an external style sheet. -->
+ <link href="restaurant.css" type="text/css" rel="stylesheet">
+ 
+<!--This is the format you will use when entering JavaScript -->    
+<script type="text/javascript">
+/* <![CDATA[ */
+
+        var curImage="banner1";
+        function bannerAd() {
+            if (curImage == "banner2") {
+                document.images[1].src = "images/banner1.jpg";
+                curImage = "banner1";
+            }
+            else {
+                document.images[1].src = "images/banner2.jpg";
+                curImage = "banner2";
+            }
+        }
+
+/* ]]> */
+</script>    
+    
+</head>
+
+  <body onload="var changeImages=setInterval('bannerAd()', 2000);">
+    <h1>Hotrod's Hot Dogs</h1>
+    <div id="wrapper">
+     <div id="leftcolumn">
+    
+
+    <nav>
+        <ul>
+            <li><a href="project2.htm">Home</a></li>
+            <li><a href="menu.htm">Menu</a></li>
+            <li><a href="catering.htm">Catering</a></li>
+            <li><a href="specials.htm">Specials</a></li>
+            <li><a href="locations.htm">Locations</a></li>
+            <li><a href="hours.htm">Hours</a></li>
+            <li><a href="about.htm">About</a></li>
+            <li><a href="survey.htm">Survey</a></li>
+        </ul>
+    
+    </nav>
+    
+     </div>
+<!--                           horiz nav example
+<nav>
+    <b><a href="pacific.htm">Home</a> &nbsp; 
+       <a href="yurts.htm">Yurts</a> &nbsp; 
+       <a href="activities.htm">Activities</a> &nbsp; 
+       <a href="reservations.htm">Reservations</a></b>
+    </nav>
+-->
+
+<!--                             vertical nav example
+    <nav>
+    <ul>
+        <li><a href="home.htm">Home</a></li>
+        <li><a href="servers.htm">Servers</a></li>
+        <li><a href="laptops.htm">Laptops</a></li>
+        <li><a href="desktops.htm">Desktops</a></li>
+        <li><a href="storage.htm">Storage</a></li>
+        <li><a href="switches.htm">Switches</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="schedule.htm">Schedules</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+    </ul>
+    
+</nav>
+-->
+
+<!-- Your XHTML here -->
+
+    <div id="rightcolumn">
+        <h3>Welcome to Hotrod's Hot Dogs</h3>
+        <p>
+            Hotrod's serves up the best dogs in the tri-state area. We use only the juiciest all-beef franks and tastiest buns.  We make everything fresh daily.
+            <br>Condiments are sliced fresh daily and we use only real lard to fry - our french fries are <em>"to die for"</em>.
+            <br><br>Come on in for some down home service and say hello!
+        </p>
+      
+        <img alt="Juicy Hot Dog" height="220" width="330" src="images/relishDog.jpg">
+        <img alt="Banner ad" height="220" width="330" src="images/banner1.jpg">
+    
+    
+    
+        <!-- external javascript for validation -->  
+        <script type="text/javascript" src="../validation.js">
+        </script>
+        </div>
+    </div>
+    <footer>Hotrod's Hotdogs &copy; 2015 </footer>
+  </body>
+  </html>
