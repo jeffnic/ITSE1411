@@ -1,0 +1,56 @@
+<!DOCTYPE html >
+<html lang="en" >
+    <head>
+        <title>
+        FizzBuzz
+        </title>    
+        <meta charset="utf-8" />
+        
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        
+        /* ]]> */
+        </script>    
+    </head>
+    
+    <body>
+        <p>
+        <div> 
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            
+            for (counter = 1; counter <= 90; counter++) {
+                if (counter % 3 ==0 && counter % 5 == 0) {
+                    document.write("FizzBuzz" + "<br>")
+                }
+
+                else if (counter % 3 == 0) {
+                    document.write("Fizz" + "&nbsp;&nbsp;")
+                }
+                
+                else if (counter % 5 == 0) {
+                    document.write("Buzz" + "&nbsp;&nbsp;")
+                }
+                
+                else {
+                    if (counter <=9 ) {
+                        document.write("&nbsp;&nbsp;" + counter + "&nbsp;&nbsp;");
+                    }
+                    else {
+                        document.write(counter + "&nbsp;&nbsp;")
+                    }
+                }
+            }
+            
+            /* ]]> */
+        </script> 
+        </p>
+        
+        <!-- external javascript for validation -->  
+        <script type="text/javascript" src="../validation.js">
+        </script>    
+        
+        </div>
+    </body>
+</html>
