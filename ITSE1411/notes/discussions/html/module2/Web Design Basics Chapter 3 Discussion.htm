@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion Web Design Basics Chapter 3 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Web Design Basics Chapter 3 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <ol>
+     <li>Design for Your Audience
+            <ul>
+              <li>Different browsers render pages differently.  Your page should look the best on the
+                  most used browser of your target audience and acceptable in other browsers.</li>
+              <li>Try to test your page on both PC and Mac when possible.</li>
+              <li>Test your page on commonly used screen resolution.  Avoid horizontal scrolling for these
+                  resolutions. </li>
+              <li>Keep in mind that many users regularly use smartphones for web browsing.</li>
+            </ul></li>
+          <li>Website Organization
+            <ul>
+              <li>Hierarchical Organization 
+                <ul>
+                  <li>Uses a clearly defined home page with links to the major site sections.</li>
+                  <li>Too shallow hierarchical organization gives too many major site sections.</li>
+                  <li>Too deep hierarchical organization goes past the 3-click rule.  The visitor should
+                      be able to get to the page within 3 clicks.  Major reconstruction of the ACC site
+                      occurred when the state legislature made the requirement of reaching all courses, syllabi,
+                      and faculty pages within 3 clicks.</li>
+                </ul></li>
+              <li>Linear Organization
+                <ul>
+                  <li>Used with tutorials, books, anything that needs sequential access.</li>
+                </ul></li>
+              <li>Random Organization
+                <ul>
+                  <li>Has no clear path through the site and no clear home page.</li>
+                </ul></li>
+            </ul></li>
+          <li>Principles of Visual Design (the look and feel)
+            <ul>
+              <li>Repetition helps unify design
+                <ul>
+                  <li>Visual repetition may include the same shape applied to different elements such
+                      as links.  Different types of links may be displayed in different formats, yet
+                      grouped with the same repetitive style.  My home page is an example of this.  I have 
+                      3 different groups of links, but all links within each group are formatted the same.</li>
+                </ul></li>
+              <li>Contrast
+                <ul>
+                  <li>Contrasting your background and your text is very important for readability.  A dark
+                      background with light text is harder to read than a light background with dark text.</li>
+                </ul></li>
+              <li>Proximity
+                <ul>
+                  <li>Close placement of related items and separating unrelated items gives a
+                      visual clue for logical organization.</li>
+                </ul></li>
+          <li id="center">Alignment
+            <ul>
+              <li>Aligning elements both horizontally and vertically creates unity in the page.</li>
+              <li>We will cover alignment through CSS later, but students always want to know how to center on a page.
+                  In order to satisfy your curiosity without the difficulty of learning too much at once, I give
+                  you an example of centering.  You will learn more alignment later.</li>
+              <li>The align attribute is used in HTML to align content.  However, in XHTML strict, CSS is used for alignment.  Unfortunately,
+                  the method to center differs from element to element and browser to browser. 
+                  <ul>
+                    <li>margin-left: auto; margin-right: auto; centers a block level element.</li>
+                    <li>text-align: center; centers the inline content of a block level element.</li>
+                    <li>&lt;h1 style="text-align: center;"&gt;Centers h tags&lt;/h1&gt;</li>
+                    <li>&lt;h1 style="margin-left: auto; margin-right: auto;"&gt;Required centering for IE block level tags.&lt;/h1&gt;</li>
+                    <li>&lt;h1 style="margin-left: auto; margin-right: auto; text-align: center;"&gt;Combine both methods to center 
+                        in multiple browsers.&lt;/h1&gt;</li>
+                    <li>&lt;div style="text-align:center; margin:0 auto 0 auto"&gt;Will center the content of the div&lt;/div&gt;</li>
+                  </ul></li>
+            </ul></li>  
+            </ul></li>
+          <li>Design to Provide for Accessibility
+            <ul>
+              <li>Accessibility is typically more usable for all because it requires a well-organized page.</li>
+              <li>Search engines will pick up pages that have descriptive text for hyperlinks and alternate text
+                  for images.</li>
+              <li>Pages used by government agencies are required to be accessible to people with disabilities.</li>
+              <li>There is discussion among lawmakers to require accessibility of pages by law.</li>              
+            </ul></li>
+          <li>Principles of Accessibility
+            <ul>
+              <li>Perceivable
+                <ul>
+                  <li>Perceivable content is easy to see or hear.</li>
+                  <li>Consider using graphic or multimedia in text format, transcripts for audio, and
+                      closed caption for videos.</li>
+                </ul></li>
+              <li>Operable
+                <ul>
+                  <li>Content is operable when access works for both mouse and keyboard.</li>
+                  <li>Avoid flashing on sites because this can cause seizures.</li>
+                </ul></li>
+              <li>Understandable
+                <ul>
+                  <li>Understandable means easy to read and helpful error messages when appropriate.</li>
+                  <li>Readability considers the font typeface, size, weight, and color of the font.</li>
+                  <li>Use common fonts.  (Typefaces for PC's are not the same as typefaces for Macs.  You should
+                      list a common font for each so that the browser will have a selection that is available
+                      for the computer being used.)  </li>
+                  <li>Do not bold everything.</li>
+                  <li>Remember the aging population when choosing font size.  Font sizes are smaller on a Mac.</li>
+                  <li>If you do not have spell check on your editor, consider uploading your page, copying the text,
+                      pasting the copied text into your text editor and doing a spell/grammar check on the text.</li>
+                </ul></li>
+              <li>Robust
+                <ul>
+                  <li>Robust sites work with assistive technologies and follow W3C Recommendations.</li>
+                </ul></li>  
+            </ul></li>                                   
+          <li>Use of Text
+            <ul>
+              <li>Write in short sentences.</li>
+              <li>Be concise.</li>
+              <li>Use headings and subheadings.</li>
+              <li>Bullets stand out.</li>
+            </ul></li>
+          <li>Web Color Palette
+            <ul>
+              <li>Colors on a monitor are created using red, green, and blue, called RGB color. </li>
+              <li>Each color can be chosen between a value of 0 and 255 for the intensity of the color.  The 
+                  numbers are not represented in digital values 0 - 255, but in hexadecimal which is 00 to FF.</li>
+              <li id="color">Color names that validate in CSS
+                    <ul>
+                      <li>There is some confusion about what web safe colors mean.  This is a very old term that means nothing now.  
+                          A few years ago, many monitors did not have the color spectrum that current monitors have.  
+                          Because of that, the 216 web safe colors were established as working on multiple browsers.    
+                          Don't worry about that at all anymore.</li>
+                      <li>But, the bigger problem is that there are only 16 colors that will validate in CSS.
+                        <ul>
+                          <li><a href="http://www.hiddenboston.com/webmasters/colornames.html">http://www.hiddenboston.com/webmasters/colornames.html</a></li>
+                        </ul></li>
+                      <li>All others should use the hex value or RGB triplet
+                        <ul>
+                          <li><a href="http://en.wikipedia.org/wiki/Web_colors">http://en.wikipedia.org/wiki/Web_colors</a></li>
+                        </ul></li>
+                    </ul></li>
+            </ul></li>   
+          <li>Choose your Color Depending on your Audience
+            <ul>
+              <li>Children and preteens prefer bright, lively colors.</li>
+              <li>Young adults generally prefer dark background colors, some bright color contrast, music
+                  and dynamic navigation.</li>
+              <li>When trying to appeal to everyone, use neutral to white background with splashes of color.</li>
+              <li>The easiest page to read uses a white background with black text.</li>
+              <li>Older adults prefer light backgrounds with well-defined images and larger text.</li>
+            </ul></li>
+          <li>Use of Graphics and Multimedia
+            <ul>
+              <li>When using graphics and multimedia, consider using text descriptors.  Also consider if it
+                  is important that our pages be accessible through mobile devices that might make the
+                  graphic incomprehensible or too slow to download.</li>
+              <li>Consider using a smaller image to link to a larger image.  The smaller graphic will download
+                  faster and give an option for those interested to look at the larger image.</li>
+              <li>Antialiased images smooth jagged images and make them easier to view.</li>
+              <li>Only use animation and multimedia if it adds value to your site.  For example, my daughter
+                  is a composer.  Multimedia is essential to her page.  See <a href="http://jonigreene.com/">
+                  Joni Greene Composition Site</a></li>
+              <li>Provide alternate text for images to allow users configure to not show images.</li>
+            </ul></li>
+          <li>More Design Considerations
+            <ul>
+              <li>Your page should load as quickly as possible.  Try to limit your file size to 60KB unless it is a content page and users are already
+                  invested in using your site.</li>
+              <li>Use image slicing, where parts of an image displays so users can see that the page is loading.</li>
+              <li>Consider breaking your page into multiple pages so that the user perceives that the load time is 
+                  shorter.</li>
+              <li>Catch the users attention by showing the more interesting information first so it is shown first.
+                  (In a newspaper, this would be above the fold.)</li>
+              <li>Whitespace (minimally discussed on page 91 of Design text)
+                <ul>
+                  <li>In HTML when you enter multiple spaces of press the enter key, you still view one space on the screen.  For example:<br />
+                  <pre>                  Hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                  World</pre><br />
+                  appears as<br />
+                  Hello
+                  
+                  World</li>
+              <li>Avoid horizontal scrolling on a page.</li>
+            </ul></li>
+          <li>Navigation Design
+            <ul>
+              <li>Navigation on a site should be in the same location on each page of the site.</li>
+              <li>Navigation bars add to readability.  It is obvious to the user how to use the navigation.</li>
+              <li>A breadcrumb trail indicates the path of web pages a visitor has viewed during the current session.</li>
+              <li>Using graphics for navigation is outdated and does not provide accessibility.</li>
+              <li>Do not overwhelm the user with too many navigation links.  Consider using dynamic navigation where a mouse cursor
+                  provides additional link options.</li>
+              <li>For large sites, consider using a site map that provides an outline of the organization of the website.</li>
+              <li>Consider using a search feature to help visitors find information in your site.</li>
+            </ul></li>
+          <li>Page Layout Design
+            <ul>
+              <li>Refer back to Assignment 1 for the Wireframes notes.</li>
+              <li>Popular Layout Design Techniques
+                <ul>
+                  <li>Fixed and Fluid Layouts 
+                    <ul>
+                      <li>Fixed layouts (also called "ice" design) hug the left margin and have a fixed width.</li>
+                      <li>Fluid layouts (also called "liquid" design) take up 100% of the screen.  With high-resolution screens, the lines of text may extend 
+                          horizontally and make the page difficult to read.</li>
+                    </ul></li>                 
+                </ul></li>           
+            </ul></li>
+          <li>Design for the Mobile Web
+            <ul>
+               <li>With increasing use of mobile devices, it is important to design web pages that are appealing and usable for your mobile users.</li>
+               <li>Approaches for writing for mobile devices
+                 <ul>
+                  <li>Develop a separate .mobi site.</li>
+                  <li>Create a separate website targeted for mobile users.</li>
+                  <li>Apply CSS to configure current website for display on mobile devices.</li>
+                 </ul></li>
+               <li>Mobile Device Considerations
+                 <ul>
+                  <li>Mobile devices use a small screen size.</li>
+                  <li>Many mobile uses experience slow connection speeds.  Some users pay per kilobyte downloaded.  Eliminate unnecessary images.</li>
+                  <li>Mobile devices may have limited font, color, and media support.</li>
+                  <li>Controls on mobile devices may be more awkward to use than on a computer.</li>
+                  <li>Provide easy access with prominent hyperlinks or a prominent search button.</li>
+                 </ul></li>
+            </ul></li>
+          <li>Responsive Web Design
+            <ul>
+                  <li>A more streamlined approach to design for multiple screen resolutions is to follow the W3C's One Web initiative to provide a
+                      single resource configured for optimal display on multiple types of devices.</li>
+                  <li>Use CSS media queries as a technique for configuring a web page to display well at various screen resolutions.</li>
+                  <li>When using a paragraph tag, the paragraph will have a blank line before and after the paragraph.</li>
+                </ul></li>
+
+            </ul></li>
+</ol>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

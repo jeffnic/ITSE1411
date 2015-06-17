@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion Cascading Style Sheets Basics Chapter 4 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Cascading Style Sheets Basics Chapter 4 
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <ol>
+            <li>Cascading Style Sheets (CSS) Basics
+            <ul>
+              <li>CSS is used to configure text, color, and page layout.  The importance of CSS has developed
+                  as the web has developed.</li>
+              <li>Defines the presentation of the page (the way things appear on the page).</li>
+              <li>You create style rules to define the page styles.</li>
+              <li>Enables the separation of the document presentation from the document content.</li>
+              <li>Warning:  Different browsers do not support CSS the same.</li>
+              <li>Advantages of Cascading Style Sheets
+                <ul>
+                  <li>Typography and page layout can be better controlled.</li>
+                  <li>Style is separate from structure.</li>
+                  <li>Styles can be stored.</li>
+                  <li>Documents are potentially smaller.</li>
+                  <li>Site maintenance is easier.</li>
+                </ul></li>
+             <li>Methods of Configuring Cascading Style Sheets
+                <ul>
+                  <li>Inline styles - coded as an attribute of an HTML tag and apply only to that specific tag.</li>
+                  <li>Embedded styles - defined in the head section of a page and apply to the entire document.</li>
+                  <li>External styles - coded in a separate file, associated to the page by linking in the head
+                      section.</li>
+                  <li>Imported styles - similar to external styles, coded in a separate file, can be imported into 
+                      embedded styles or into another external style sheet.</li>
+                </ul></li>
+              <li>The rules of precedence that apply to style sheets are:
+                <ol>
+                  <li>Browser Defaults</li>
+                  <li>External Styles</li>
+                  <li>Embedded Styles</li>
+                  <li>Inline Styles</li>
+                  <li>HTML Attributes</li>
+                </ol></li>                  
+              <li>CSS Selectors and Declarations
+                <ul>
+                  <li>Style Rule Basics
+                    <ul>
+                      <li>Each style rule has two parts:
+                        <ul>
+                          <li>CSS Style Rule Selector - the selector can be an HTML element name, a class name, 
+                              or an id name.</li>
+                          <li>Css Style Rule Declaration - the declaration indicates the CSS property you are 
+                              setting and the value you are assigning to the property.</li>
+                        </ul></li>
+                    </ul></li>
+                  <li>The background-color Property example:<br />
+                      body { background-color: yellow}</li>
+                  <li>The color Property example:<br />
+                      body { color: blue }</li>
+                  <li>Combined properties use a semicolon to divide the properties example:<br />
+                      body { color: blue; background-color: yellow; }</li>
+                </ul></li>
+                  <li>CSS Syntax for Color Values
+                     <ul>
+                        <li>Color values can be found at <a href="http://webdevbasics.net/color">Textbook Companion Color Site</a></li>
+                        <li>When writing multiple styles, spaces are optional, but help the developer read the code.  Each style ends with a semi-colon.
+                            (The ending style semi-colon is optional but useful when adding additional styles later.)</li>
+                        <li>Colors can be configured using:
+                            <ul>
+                              <li>color name (limited use) -- ex:  p { color: red; }</li>
+                              <li>hexadecimal color value -- ex: p { color: #FF000 }</li>
+                              <li>hexadecimal shorthand color value -- ex:  p { color: #F00 }</li>
+                              <li>decimal color value (RGB triplet) -- ex:  p { color: rgb(255,0,0) }</li>
+                              <li>HSL (Hue, Saturation, and Lightness) color value, which is new to CSS3.  See
+                                  <a href="http://www.w3.org/TR/css3-color/#hsl-color">W3C HSL site</a> -- ex:  p { color: hsl(p, 100%, 50%) }</li>
+                              <li>HSLA (Hue, Saturation, Lightness, and Alpha) The alpha configures transparency.</li>
+                            </ul></li>
+                     </ul></li>
+                  <li>Inline styles
+                    <ul>
+                      <li>Coded into each HTML element each time you want to override the default, 
+                          embedded, or external style.</li>
+                      <li>Can override an embedded or external style rule.</li>
+                      <li>Written inside an element tag much like an element attribute.</li>
+                      <li>Affects only the element that contains the CSS code.  For example
+                        <ul>
+                          <li>&lt;p style="font-size: x-large; color: #ff9900"&gt;</li>
+                        </ul></li>
+                      <li>This sets the font-size to x-large.  The relationship between sizes is not precisely 
+                          defined in CSS, but there is a suggested scaling factor of about 1.2.  The default size is
+                          medium, which is approximately 12 pt.</li>
+                      <li>Also, the color is set to the hex value #ff9900. (see color names that validate below)</li>
+                    </ul></li>
+                  <li>Embedded styles
+                    <ul>
+                      <li>Written in the head section of the page inside an HTML style tag.</li>
+                      <li>Can override an external style rule.</li>
+                      <li>Written for each element type, not each individual element.</li>
+                      <li>In XHTML embedded Styles are written in the head between style tags.  Syntax:
+                        <ul>
+                          <li>&lt;style type="text/css"&gt;<br />
+                            <i>(your css code)</i><br />
+                                &lt;/style&gt;</li>
+                          <li>The format for the css code is the same as the format for external styles.  See below.</li>
+                        </ul></li>
+                      <li>In HTML5 embedded Styles are written without the type="text/css" attribute.</li>
+                    </ul></li>
+                  <li>External styles
+                    <ul>
+                      <li>Linked from the head section of a page, but written as an external file.</li>
+                      <li>Applies to all pages that link to the page.</li>
+                      <li>Syntax for external style
+                        <ul>
+                          <li id="center">selector {property:value}<br />
+                              Example will change the text of your page to blue: <br />
+                              body {color: blue;} </li>
+                        <li>Do not start your external CSS page with the HTML page template.  Only CSS is written on
+                            an external style page.</li>
+                      </ul></li>
+                    <li>Syntax for linking to external style
+                      <ul>
+                        <li>&lt;link href="address of css page" rel="stylesheet" type="text/css" /&gt;</li>
+                        <li>The link in the head page of the HTML page will link to the CSS page.</li>
+                        <li>The link tag is self-closing.</li>
+                        <li>Do not put the link tag inside of style tags.  External styles do not use
+                            the style tag.</li>
+                        <li>All style types can be applied to the same page.  This means that you can have 
+                            an external style sheet, an internal (embedded) style sheet, and inline styles 
+                            all on the same page.</li>
+                        <li>Separate multiple styles for the same element with a semicolon.</li>
+                  </ul></li>
+              </ul></li>
+
+
+
+      </ul></li>
+    <li>CSS Class, Id, and Contextual Selectors
+      <ul>
+        <li>The Class Selector:
+          <ul>
+            <li>Used to apply a CSS declaration to a set of elements and not a particular element.</li>
+            <li>Use the dot (.) in front of the class name in the style sheet.  For example the style:<br />
+              .feature { color: #FF00000; } <br />
+              would set to red any element with the class attribute set to feature.  For example:<br />
+              &lt;li class="feature"&gt;Usability Studies&lt;/li&gt;</li>
+          </ul></li>
+        <li>The Id Selector:
+          <ul>
+            <li>Used to apply a CSS declaration to a unique single area.</li>
+            <li>Use the pound (#) in front of the id name in the style sheet.  For example the style:<br />
+              #footer { color: #333333; }<br />
+              would set to dark gray the element with the id attribute set to footer.  For example:<br />
+              &lt;div id="footer"&gt;This paragraph will be displayed using styles
+              configured in the footer id.&lt;/div&gt;</li>
+           </ul></li>
+        <li>The Contextual Selector:
+          <ul>
+            <li>Used when you want to specify an element with the context of its container (parent) element.</li>
+            <li>Use the list container (an element selector, class, or id) followed by the specific selector you
+                are styling.  For example: <br />
+                #footer a { color: #00ff00; }
+                will apply the color green to anchor tags located within the footer id.</li>
+          </ul></li>
+        <li>The Span Element discussed in Competency 1 discussion notes.</li>
+      </ul></li>
+      </ol>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

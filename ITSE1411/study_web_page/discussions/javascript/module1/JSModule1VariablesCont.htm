@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Variable Discussion Continued JS Chapter 1 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS Module 1 Discussion Variables Continued
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ul>
+       <li>Declaring and Initializing Variables
+          <ul>
+            <li>A variable must be created, called declaring the variable.</li>
+            <li>A variable is used to hold a value.  The most basic way for a variable to hold a value is to 
+                assign the value.  This is done with the sign (=), which you may recognize as an equal.  However,
+                in JavaScript, this character does not mean equal, it means assignment and is called the 
+                assignment operator.  For example:<br />
+                var number = 6;<br />
+                var firstName = "Judy"<br />
+                var salesTax = 0.0825</li>
+            <li>The above examples shows an integer variable (a whole number, a string variable -- we used those
+                in the document.write() methods in the first assignment, and a numeric number with a decimal
+                point.  Notice numbers NEVER have quotes unless they are meant to be used as text (like a phone
+                number or zip code).</li>
+            <li>The first time you assign a value to a variable it is called initialization.  Initialization is
+                not required.  You can wait and make assignments later and even reassign values.</li>
+          </ul></li>
+        <li>Displaying Variables
+          <ul>
+            <li>A value can be displayed using the document.write() method.  In the Healthy Heart Assignment,
+                you will use document.write() methods for literal strings only.</li>
+            <li>To separate literal strings and variables in the document.write()
+                method, use the + operator.  In the past in mathematics, you used the + operator to mean
+                addition.  But, in JavaScript the + operator has more than one meaning.  It also means
+                concatenation, which links literal strings and variables. Assuming that you have a variable
+                that has been declared and assigned a value and you wish to display the value with a description.
+                For example:<br />
+                document.write("&lt;p&gt;Your sales total is $" + salesTotal + ".&lt;/p&gt;");</li>
+          </ul></li>
+        <li>Modifying Variables
+          <ul>
+            <li>You can change the value of a variable.  The value does not have to remain as the initialized
+                value.  For example:<br />
+                var cost = 10;<br />
+                var tax = .0825;<br />
+                tax = cost * tax;<br />
+                cost = cost + tax;<br />
+                There are many ways to solve a math problem.  The example above is only one.  The variable
+                cost is first assigned 10.  Tax is assigned .0825.  Then, tax is changed to be the cost times 
+                the tax, which would be .825 in this example.  Then, if you add the tax to the cost, the 
+                cost is 10.825.  (Rounding does not occur automatically.)</li>
+          </ul></li>
+  </ul>
+</div>    
+ 
+<div class="clearfloats"></div>
+</div>
+</body>
+</html>

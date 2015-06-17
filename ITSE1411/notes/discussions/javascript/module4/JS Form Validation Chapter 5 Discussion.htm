@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Form Validation Chapter 5 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+ol.roman{list-style-type:upper-roman;}
+ol.lalpha{list-style-type:lower-alpha;}
+ol.lroman{list-style-type:lower-roman;}
+</style>
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS Form Validation Chapter 5 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+<div class="clearfloats"></div>
+
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ol>
+          <li>Form Validation using onsubmit and onreset event handlers
+          <ul>
+            <li>The submit button, when pressed, triggers the onsubmit event handler.</li>
+            <li>The onsubmit event handler is written inside the form tag.</li>
+            <li>The onsubmit event handler is often used to validate the form data.</li>
+            <li>The reset button, when pressed, triggers the onreset event handler.</li>
+            <li>The onreset event handler is also written inside the form tag.</li>
+            <li>The onreset event handler is often used to confirm that the form is to be reset.</li>
+            <li>The onsubmit and onreset event handlers often call functions to perform the work needed to validate or confirm that
+                a form is to be reset.  The function called by the onsubmit event handler returns true when the validation is completed
+                and all elements are valid and a false when any element is not valid.  The onreset event handler returns a true when the reset is confirmed
+                and a false when the reset is cancelled.</li>
+          </ul></li>
+          <li>Validating Text and Password Boxes
+          <ul>
+             <li>Test to see that text boxes and password boxes using the if statement.  For numeric fields test with isNaN() method.  Return a true when all boxes
+                 validate.  Return a false when any box does not validate.  It is helpful to use an alert box to show why something does not validate.</li>
+          </ul></li>
+          <li>Validating Radio Buttons
+            <ul>
+              <li>JavaScript creates an array of elements that share the same name, so that a single name=value pair will be submitted when the form is
+                  submitted.  The checked property returns a true is selected and a false if not selected. </li>
+          </ul></li>
+          <li>Validating Check Boxes
+          <ul>
+            <li>You may select one or more check boxes in a group.  The checked property returns a true when a box is selected and a false when a box
+                is not selected.</li>
+          </ul></li>
+          <li>Validating Selection Lists
+          <ul>
+            <li>If no selection has been made in a selection list, the selectedIndex property contains a value of -1.</li>
+          </ul></li>
+  </ol>
+
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

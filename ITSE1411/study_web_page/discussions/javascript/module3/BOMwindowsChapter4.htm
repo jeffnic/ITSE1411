@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Browser Object Model windows Chapter 4 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+ol.roman{list-style-type:upper-roman;}
+ol.lalpha{list-style-type:lower-alpha;}
+ol.lroman{list-style-type:lower-roman;}
+</style>
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS BOM windows Chapter 4 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ol>
+    <li>Windows can be divided into multiple frames using frameset.  However, frames are obsolete in both XHTML and HTML5</li>
+    <li>Opening a new Window
+       <ul>
+            <li>A new window object is created with a new window is opened.</li>
+            <li>The number of windows allowed open at a time depends on what your system will support.</li>
+            <li>The target attribute was deprecated but it is no longer deprecated in HTML5.</li>
+            <li>Using the target attribute, a new window can be opened in an anchor using<br />
+                &lt;a href="someURL" target="windowName"&gt;some page&lt;/a&gt;</li>
+            <li>To open a window using XHTML by using<br />
+                window.open(url to be opened, name assigned to the new window, options allowing customization of the window's appearance, replace
+                value to  indicate if the window should go in the history list);</li>
+            <li>All arguments in the open method are optional omitting arguments right to left.</li>
+            <li>Options for customization are listed in Table 4-4 on page 210.</li>
+       </ul></li>
+    <li>Closing a window
+        <ul>
+            <li>The close() method is used to close a window.  To close a named window, use <br />
+                 variableName.close();</li>
+            <li>To close the current window use<br />
+                 window.close(); or self.close();</li>
+        </ul>
+    </li>
+
+  </ol>  <!-- BOM  -->
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

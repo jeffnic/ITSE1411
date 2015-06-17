@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Module 4 Project ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Module 4 Project Assignment
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Assignment</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <ol>
+          <li>Restaurant menu page
+            <ul>
+               <li>You must convert your menu page to a form. (You do not need to do this to your specials page.)
+                   Your current menu table was written in JavaScript. Remember, all form elements must be placed between the open and close form tags.</li>   
+               <li>Add text boxes to your menu page next to each item sold.  </li>
+               <li>Add a button (which must be inside the same form tags, that when pressed calls a function (placed in the head)
+                   that will calculate the order according to the number of items sold.  Here is an example that calculates for one item only:<pre>
+function calculate()
+{   var error = false; 
+    if (isNaN(document.forms[0].steak.value))
+    {
+    alert("A numeric value is required when ordering steak");
+    error = true;
+    }
+    else
+    {
+        var numberSteak = parseInt(document.forms[0].steak.value);
+    }
+    if (!error)
+    {
+      total = numberSteak * 15 * 1.0825;
+      window.alert("Your order totals: " + total.toFixed(2))
+    }
+}     
+                   </pre></li>
+               <li>
+                  <ol>
+                     <li>The function calculate sets a variable error to false to show no error has been found.</li>
+                     <li>The if statement checks to make sure that an alphabetic value has not been entered.</li>
+                     <li>When a non-numeric value has been entered, an alert box shows the user where an error has occurred. </li>
+                     <li>The variable error is set to true to show that an error has occurred.</li>
+                     <li>When a numeric value has been entered, the value entered in the text box is converted to an integer and assigned to the variable numberSteak.</li>
+                     <li>The if (!error) uses the not operator to change the value of error.  When true, !error will evaluate to false.  When false, !error will
+                         evaluate to true.  Therefore, if no error has been found, !error will perform the calculations.</li>
+                     <li>The calculation multiplies the number of steak ordered, the price for one steak, and then the sales tax.</li>
+                     <li>The alert box shows the total of the order written to 2 decimal places.</li>
+                  </ol>
+               </li>
+               <li>You will need your calculations to include all items in the menu.</li>
+            </ul></li>
+          <li>Restaurant application page
+            <ul>
+               <li>Create an employment application page with at least the following elements:
+                  <ul>
+                     <li>Must use the onsubmit event handler and show an alert box if the page does not validate.</li>
+                     <li>An email field that is validated for a valid email address.</li>
+                     <li>A selection box that is validated for a selection having been made.</li>
+                     <li>A set of radio buttons validated for a radio button having been selected.</li>
+                     <li>A reset button.</li>
+                  </ul></li>
+              </ul></li>  
+          <li>Update index page with links
+             <ul>
+                  <li>Open your index.htm page in Komodo Edit.</li>
+                  <li>Copy all pages from your module3 folder that you need to properly display your new
+                      restaurant site to your module4 folder.</li>
+                  <li>Update your index.htm page to link to your project4.htm page in your module4 folder.</li>
+                  <li>Upload your index.htm page to the public_html folder and your project4.htm in your Module4 folder.
+                      Test for validation.</li>
+                  <li>Email jscholl@austincc.edu for grading.</li>
+             </ul>
+          </li>
+          <li>Student examples (You are not to copy the style or layout of student examples. These just show you what other students have done. Try to be original.) 
+            <ol>
+                  <li><a href="http://www.austincc.edu/jscholl/spring2013/projects/student1ex1project4.png" target="_blank">Minghua Liu Example 1</a></li>
+            </ol></li>
+      </ol>
+
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

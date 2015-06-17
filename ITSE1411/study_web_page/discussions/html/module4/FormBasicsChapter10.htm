@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion Form Basics Chapter 10 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Form Basics Chapter 10  
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+<ol>
+      <li>
+      <table border="1px" width="100%">
+            <caption>A form organizes objects called form elements or form controls that allows users to input data.  The
+                   form does not do the processing.  The submit button on the form submits the form for further processing
+                   either to another web page or to the server.  The form itself is the user interface.  Server-side
+                   processing can include email, writing to a file, or updating a database.  The form element has the following attributes:
+            </caption>
+
+                  <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+                  <tr><td>action</td><td>URL or file name/path of server-side processing script</td>
+                        <td>Required; indicates where to send the form information or emailed.</td></tr>
+                  <tr><td>autocomplete</td><td>on<br />off</td>
+                        <td>HTML5 on attribute; browser will use autocompletion to fill form fields<br />
+                            off attribute; browser will not use autocompletion to fill form fields.</td></tr>
+                  <tr><td>id</td><td>Alphanumeric, no spaces; must be unique on each page.</td>
+                        <td>Optional; provides a unique identifier for the form</td></tr>
+                  <tr><td>method</td><td>get<br />post</td>
+                        <td>get is default value; causes the form data to be appended to the URL and sent to server or address
+                            identified in the action.  post is more private because the data is not seen in the URL</td></tr>
+                  <tr><td>name</td><td>alphanumeric, no spaces; begins with a letter</td>
+                        <td>Optional; names the form to be easily accessed to verify form data before processing.</td></tr>
+      </table>
+      <p></p></li><li>
+      <table border="1px" width="100%">
+            <caption>Form controls are used to gather information entered on a web page.  The input element configures
+                  several different types of form controls.  The input is always accepted as text (even if numerics are used).  Common input element attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>type</td><td>text</td>
+                  <td>Configures the text box.</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>size</td><td>numeric</td>
+                  <td>Configures the width of the text box.  If no size is given, the browser default size is used.</td></tr>
+            <tr><td>maxlength</td><td>numeric</td>
+                  <td>Configures the maximum number of characters accepted.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Displays an initial value in the text box.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>readonly</td><td>readonly</td>
+                  <td>Form control is for display only.</td></tr>
+            <tr><td>autocomplete</td><td>on <br />off</td>
+                  <td>HTML5 attribute; on attribute is default and uses autocomplete to fill the form element<br />
+                      off attribute will not use autocomplete</td></tr>
+            <tr><td>autofocus</td><td>autofocus</td>
+                  <td>HTML5 attribute; places cursor in the form in the element with autofocus.</td></tr>
+            <tr><td>list</td><td>Datalist element id value</td>
+                  <td>HTML5 attribute; associates the form control with a datalist element.</td></tr>
+            <tr><td>placeholder</td><td>text or numeric</td>
+                  <td>HTML5 attribute; shows text in a field until the field is focused upon, then hides the text.</td></tr>
+            <tr><td>required</td><td>required</td>
+                  <td>HTML5 attribute, browser verifies entry of data before submitting the form.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>        
+      </table>
+      <p></p></li><li>
+      <table border="1px" width="100%">
+      <caption>The submit button, when clicked, triggers the action method of the &lt;form&gt; tag and sends each element's
+             name and value (called name=value pair) to the server (or another web page).  The reset button, when clicked,
+             resets all values to the initial values.  Common attributes for submit and reset buttons are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Usage</th></tr>
+            <tr><td>type</td><td>submit<br />reset</td>
+                  <td>submit creates a submit button<br />reset creates a reset button</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Displays an initial value in the text box.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+      </table>
+      <p></p></li><li>
+      <table border="1px" width="100%">
+            <caption>The check box allows the user to select one or more of a group of boxes.  Common check box attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>type</td><td>checkbox</td>
+                  <td>Configures the check box.</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>checked</td><td>checked</td>
+                  <td>Configures the check box to be checked as default when checked.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Assigns a value to the check box when the check box is checked.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>autofocus</td><td>autofocus</td>
+                  <td>HTML5 attribute; browser places cursor in the form control and sets focus.</td></tr>
+            <tr><td>required</td><td>required</td>
+                  <td>HTML5 attribute, browser verifies entry of data before submitting the form.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+      </table>
+      <p></p></li><li>
+      <table border="1px" width="100%">
+            <caption>The radio button allows the user to select one of a group of buttons.  Common radio button attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>type</td><td>radio</td>
+                  <td>Configures the radio button.</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>checked</td><td>checked</td>
+                  <td>Configures the radio button to be selected as default when displayed.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Assigns a value to the radio button when the radio button is selected.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>autofocus</td><td>autofocus</td>
+                  <td>HTML5 attribute; browser places cursor in the form control and sets focus.</td></tr>
+            <tr><td>required</td><td>required</td>
+                  <td>HTML5 attribute, browser verifies entry of data before submitting the form.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+      </table>
+      <p></p></li>
+      <li><table border="1px" width="100%">
+            <caption>Hidden field is not visible in the browser viewport.  The advantage is that the value can be
+                   accessed by name or id while not being viewable.  Common hidden field attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>type</td><td>text</td>
+                  <td>Configures the hidden form element.</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Displays an initial value in the text box.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+      </table>    
+      <p></p></li>
+      <li>
+            <table border="1px" width="100%">
+                <caption>The password box is similar to the text box but displays the information as an asterisk or another
+                       character.  Common password box attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>type</td><td>text</td>
+                  <td>Configures the password box.</td></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>size</td><td>numeric</td>
+                  <td>Configures the width of the password box.  If no size is given, the browser default size is used.</td></tr>
+            <tr><td>maxlength</td><td>numeric</td>
+                  <td>Configures the maximum number of characters accepted.</td></tr>
+            <tr><td>value</td><td>text or numeric</td>
+                  <td>Displays an initial value in the password box.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>readonly</td><td>readonly</td>
+                  <td>Form control is for display only.</td></tr>
+            <tr><td>autocomplete</td><td>on <br />off</td>
+                  <td>HTML5 attribute; on attribute is default and uses autocomplete to fill the form element<br />
+                      off attribute will not use autocomplete</td></tr>
+            <tr><td>autofocus</td><td>autofocus</td>
+                  <td>HTML5 attribute; places cursor in the form in the element with autofocus.</td></tr>
+            <tr><td>placeholder</td><td>text or numeric</td>
+                  <td>HTML5 attribute; shows asterisks in a field until the field is focused upon, then hides the text.</td></tr>
+            <tr><td>required</td><td>required</td>
+                  <td>HTML5 attribute, browser verifies entry of data before submitting the form.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+            </table>
+      <p></p></li>
+      <li>
+            <table border="1px" width="100%">
+                  <caption>Textarea element configures a scrolling text box.  Common scrolling text box attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>cols</td><td>numeric</td>
+                  <td>Required; configures the width (by character) of the scrolling text box.  If not used,
+                      the browser default width is used.</td></tr>
+            <tr><td>rows</td><td>numeric</td>
+                  <td>Required; configures the height (by character) of the scrolling text box.  If not used,
+                      the browser default width is used.</td></tr>
+            <tr><td>maxlength</td><td>numeric</td>
+                  <td>Configures the maximum number of characters accepted.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>readonly</td><td>readonly</td>
+                  <td>Form control is for display only.</td></tr>
+            <tr><td>autofocus</td><td>autofocus</td>
+                  <td>HTML5 attribute; browser places cursor in the form control and sets the focus.</td></tr>
+            <tr><td>placeholder</td><td>text or numeric</td>
+                  <td>HTML5 attribute; shows asterisks in a field until the field is focused upon, then hides the text.</td></tr>
+            <tr><td>required</td><td>required</td>
+                  <td>HTML5 attribute, browser verifies entry of data before submitting the form.</td></tr>
+            <tr><td>wrap</td><td>hard or soft</td>
+                  <td>HTML5 attribute; configures line breaks within the information entered.</td></tr>
+            <tr><td>accesskey</td><td>Keyboard character</td>
+                  <td>Configures a hot key for the form control</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>    
+            </table>
+      <p></p></li>
+      <li>
+            <table border="1px" width="100%">
+                  <caption>Select element contains a selection list.  Common select element attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Usage</th></tr>
+            <tr><td>name</td><td>alphanumeric, no spaces, begins with a letter</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>id</td><td>alphanumeric, no spaces, begins with a letter.</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>size</td><td>text or numeric</td>
+                  <td>Configures the number of choices the browser will display.  If the number of elements is greater
+                      than the size, then a scroll bar appears.</td></tr>
+            <tr><td>multiple</td><td>multiple</td>
+                  <td>Configures a select list to accept more than one choice.</td></tr>
+            <tr><td>disabled</td><td>disabled</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>tabindex</td><td>numeric</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+            </table>
+      <p></p></li>
+      <li>
+            <table border="1px" width="100%">
+                  <caption>The option element contains and configures an option item displayed in the select list form control.  Common option element attributes are:</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Usage</th></tr>
+            <tr><td>value</td><td>text or numeric characters</td><td>Assigns a value to the option; this value can be accessed by
+                    client-side and by server-side processing.</td></tr>
+            <tr><td>selected</td><td>selected</td><td>Configures an option to be initially selected when displayed by a browser.</td></tr>
+            <tr><td>disabled</td><td>disabled</td><td>Form control is disabled.</td></tr>
+            </table>
+      <p></p></li>
+      <li>The label element has two different methods:
+         <ul>
+            <li>The label element is used as a container around both the text description and the form element.</li>
+            <li>The label method uses the "for" attribute to associate the label with a particular HTML form element.</li>
+         </ul>
+      <p></p></li>
+      <li>The fieldset element can be used to put a border around a group of form elements.
+      <p></p></li>
+      <li>The legend element provides a text description of a fieldset grouping.    
+      <p></p></li>
+
+      <li><ul>
+            <li>Using HTML elements label, fieldset, and legend increases accessibility to a web form because it increases readability.</li>
+            <li>The tabindex attribute used on form control will allow users to use the tab key rather than the mouse to navigate the form.</li>
+            <li>The accesskey attribute can be used to create a hot key to move the cursor immediately to a form control.</li>
+      </ul>
+       <li>Use CSS methods, such as the box model, to apply style to elements in a form.
+      <p></p></li>           
+      <p></p></li>
+      <li>Server-side scripting is run on a server and is processed before a web page is rendered.  JavaScript is a client-side
+          script.  We will not cover server-side scripting this semester.
+      <p></p></li>
+      <li>HTML5 text form controls are similar to text boxes except they must be in the format of the type of input.  If the
+          browser does not recognize these form controls, the element will display as a text box.  These include:
+          <ul>
+            <li>E-mail address input form.</li>
+            <li>URL form control.</li>
+            <li>Telephone number form control.</li>
+            <li>Search form control</li>
+            <li>Datalist element displays a text box as well as a selection list of options.</li>
+            <li>The slider input form control accepts a numerical value and configures a slider within a specified range.</li>
+            <li>The spinner input form control accepts a numerical value and provides feedback to the user within a
+                specified range.</li>
+          </ul>   
+      <p></p></li>
+            <li>
+            <table border="1px" width="100%">
+                  <caption>HTML5 Date and Time Controls accept date and time-related information.</caption>
+            <tr><th>Attribute</th><th>Value</th><th>Usage</th></tr>
+            <tr><td>date</td><td>a date</td>
+                  <td>Names the form element.  Should be unique and usually matches the id.</td></tr>
+            <tr><td>datetime</td><td>a date and time (offset from UTC time)</td>
+                  <td>Provides a unique identifier for the form element.</td></tr>
+            <tr><td>datetime-local</td><td>a date and time without time zone information</td>
+                  <td>Configures the number of choices the browser will display.  If the number of elements is greater
+                      than the size, then a scroll bar appears.</td></tr>
+            <tr><td>time</td><td>a time without time zone information</td>
+                  <td>Configures a select list to accept more than one choice.</td></tr>
+            <tr><td>month</td><td>a year and month</td>
+                  <td>Form control is disabled.</td></tr>
+            <tr><td>week</td><td>a year and week</td>
+                  <td>Configures the tab order of the form control.</td></tr>
+            </table>
+      <p></p></li>
+            <li>The color-well for control displays an interface that offers a color-picker interface tot he user.          
+      <p></p></li>
+</ol>
+      
+</div>
+
+</div>
+</body>
+</html>

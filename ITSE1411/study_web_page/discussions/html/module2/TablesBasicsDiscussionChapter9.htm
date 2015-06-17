@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion Table Basics Chapter 9 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Tables Basics Discussion Chapter 9  
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <ol>
+            <li>Tables
+              <ul>
+                <li>Tables are used to organize a page.  Tables are used today similar to a spreadsheet.  Before
+                    CSS, tables were used for design layout.  This is no longer recommended.</li>
+                <li>A table can consist of a single table data cell, a row, a column, or a grid of rows and columns.</li>
+                <li>Click on <a href="http://www.austincc.edu/jscholl/spring2013/formExamples/tableExample.htm" target="_blank">tableExample.htm</a></li>
+                <li>View the source.</li>
+                <li>Save in your module2 folder.</li>
+                <li>Open tableExample.htm in LTS.</li>
+                <li>Resize this page on the left of your screen.</li>
+                <li>Resize the tableExample.htm page on the right of your screen.</li>
+                <li>Explanation of the table on the tableExample.htm page
+                  <ul>
+                    <li>The table tag designates that there will be a table.  Unlike formatting other text in XHTML strict,
+                        table formatting can use HTML properties inside the table tags.</li>
+                    <li>Optional attributes of the table
+                      <ul>
+                        <li>Tables can be sized in html in either pixels or percentages.  If no measurement is shown, then
+                            the default is pixels.  To designate sizes in other measurements, such as points, em, cm, etc., 
+                            you must use CSS.</li>                      
+                        <li>Unless specified, a table border will not show in a table.  See 
+                            <a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_borders">
+                            W3Schools table border example</a>.</li>
+                        <li>The summary attribute provides for accessibility to give an overview of the context of the table.</li>
+                        <li>The title attribute provides a brief description to give an overview of the table.</li>
+                        <li>Cellpadding is the space between the contents of the cell and the cell wall. The default for
+                            cellpadding is 1 px. 
+                            (Think of being locked in a padded cell.) This is obsolete in HTML5.</li>
+                        <li>Cellspacing controls the space between table cells. When no cellspacing is designated, the default
+                            is usually 2. This is obsolete in HTML5.</li>
+                        <li>Colgroup tag is used to group columns in a table for formatting.  The order that you place the
+                            colgroup is the order of the columns of the table from left to right. The colgroup formatting will not
+                            show up in Firefox.</li>
+                        <li>The width attribute designates the width of the element. (This is obsolete in HTML5.)</li>
+                        <li>The align attribute defines the horizontal alignment. (This is obsolete in HTML5)</li> 
+                        <li>The span attribute can apply the colgroup to more than one column.</li>
+                        <li>In tableExample.htm the first column is used for labels and is formatted differently than the next four
+                            columns.</li>
+                      </ul></li>
+                <li> Table Rows, Cells, and Headers
+                      <ul>                    
+                        <li>A table is divided into rows (with the &lt;tr&gt; tag)</li>
+                        <li>Each row is divided into data cells with the &lt;td&gt; tag (table data) or &lt;th&gt; tag (table heading).</li> 
+                        <li>A data cell can contain text, images, lists, paragraphs, forms, horizontal rules, tables, etc.</li>
+                        <li>Unless specified, a table will be the width that the browsers decide it
+                            will be according to the cell contents.</li>
+                        <li>A table header element, written &lt;th&gt; is like a table data item &lt;td&gt; except
+                            it centers and bolds the contents.</li>
+                      </ul></li>
+                  <li>Span Rows and Columns
+                      <ul>
+                        <li>The colspan attribute is used to allow a cell to use more than one column.</li>
+                        <li>The rowspan attribute is used to allow a cell to use more than one row.</li>
+                      </ul></li>
+                  <li>Configure an Accessible Table
+                      <ul>
+                        <li>Be sure to use a detailed summary for screen readers to read to the user.  The
+                            example in the text breaks the string in the summary.  This will not work.  You need 
+                            to close the string, concatenate, and open the string on each line.  For example<pre>    summary="A list of bird sightings with one bird"
+    + "listed in each row.  The first column contains the name of the bird."
+    + "The second column contains the date the bird was indentified."</pre></li>
+                        <li>The caption element will provide a text caption for the table.  Some browsers put
+                            the caption at the top of the table.  Some browsers put the caption at the bottom of
+                            the table.</li>
+                      </ul></li>
+                  <li>Style a Table with CSS
+                      <ul>
+                        <li>Check out Table 9.2, page 274 that compares the HTML attributes to the coinciding CSS
+                            Properties.</li>
+                      </ul></li>
+                  <li>CSS3 Structural Pseudo-classes
+                      <ul>
+                        <li>CSS3 has what is called the structural pseudo-class selector to allow you to
+                            apply formatting according to placement within an element.  Be aware that users
+                            with older browsers will not be able to render this formatting.</li>
+                      </ul></li>
+                  <li>Configure Table Sections
+                      <ul>
+                        <li>Tables can be grouped into three types, table head, written &lt;thead&gt;,
+                            table body, written &lt;tbody&gt;, and table footer, written &lt;tfoot&gt;.</li>
+                        <li>Please note that if you choose to use the table footer, you actually code it
+                            before the table body to pass W3C validation for XHTML.  In HTML5, the table 
+                            footer goes more logically below the table body.</li>
+                      </ul></li>
+                  </ul></li>
+              </ul></li>
+              
+      </ol>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>
