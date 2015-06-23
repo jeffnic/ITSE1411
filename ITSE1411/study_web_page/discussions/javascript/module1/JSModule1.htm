@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Chapter 1 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS Module 1 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ul>
+      <li>Textbook files.
+              <ul>        
+                <li>The JavaScript text tells you that the data files are available on a CD-ROM with your book.
+                  <ul>
+                    <li>If you did not receive a CD-ROM, you may download the files from the publisher. 
+                        <a href="http://www.wadsworth.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&amp;product_isbn_issn=9780538748872&amp;token=FA3168F847B6BA71B86F5108C722FE7F6482C134F5EEF867712419237B116A169F9BA9BDABF2F46CD0A35D03ADF25019">
+                        student data files</a>.  </li>
+                    <li>The suggested method for saving your pages described in the text is complicated.  I have you set up an easier
+                        method in the practice below.</li>
+                  </ul></li>
+              </ul></li>
+            <li>Always runs within a web page.  Cannot run independently.
+              <ul>
+                <li>A client-side scripting language.</li>
+                <li>Used to create interactive pages.</li>
+                <li>Code contained inside HTML script tags.
+                  <ul>
+                    <li>The script tag either contains scripting statements or it refers to an external 
+                        script file through the src attribute.</li>
+                    <li>Use the type attribute and assign the value "text/javascript" written<br />
+                        &lt;script type="text/javascript"&gt;</li>
+                    <li>Since JavaScript cannot be used outside of the Web browser, JavaScript is considered to
+                        be safe to run.</li>
+                    <li>JavaScript does not allow any file manipulation.</li>
+                    <li>Reading and writing cookies is the only access to a client that JavaScript has.</li>
+                  </ul></li>
+                <li><b>The W3C does not validate JavaScript code.</b></li>
+             </ul></li>
+            <li>Server-side scripting
+              <ul>
+                <li>Scripting languages that are executed from a web server.</li>
+                <li>ITSE 1411 does not study server-side scripting.  (The next course in the
+                    sequence ITSE 2402 will introduce PHP, a server-side scripting.)</li>
+                <li>Server-side scripting usually prepares and processes the data, like password verification.</li>
+                <li>Server-side scripting languages cannot access or manipulate a Web browser.</li>
+              </ul></li>
+            <li>When to use client-side scripting
+              <ul>
+                <li>Must -- When you want to control the browser</li>
+                <li>Suggested -- To handle user interface processing, data validation, and low-level calculations.</li>
+              </ul></li> 
+            <li><b>Using the &lt;script&gt; element</b>
+              <ul>
+                <li>The type attribute tells the browser which scripting language is being used.</li>
+                <li>As with all HTML elements, the code inside the tags is executed at 
+                    the time the browser interprets the element.  (An exception to this is when using functions or
+                    methods, to be covered later.)</li>  
+               </ul></li>
+            <li>Understanding JavaScript Objects
+                <li>Objects
+      <ul>
+        <li>The introduction of objects at this point in the text is to explain the write and writeln methods.  
+            However, the technical jargon is a little hard to follow for beginning programmers.
+            You are given this as an example but it differs from most other objects and methods we will use.</li>
+        <li>One explanation of an object is to think of this in non-technical terms, apply the theory to your self.  
+            You can get many different services from a bank.  You can have a checking account, a mortgage, a car
+            loan, and a savings account.  Each of these services has a set of different rules, fees, interest, etc.
+            In programming, you can define all the rules for each and call that an object.  There is different code
+            to describe an object and code to write the instructions to perform the steps that does the work for 
+            the object.</li>    
+        <li>More explanation of objects is deferred until they are used other than in the document.write() method.</li>
+        <li>Using the write() and writeln() methods
+              <ul>
+                <li>To display text in HTML, you simply place the Text between the relevant block tag, and it is
+                    displayed.  However, to display text on a screen using JavaScript, you use either the document.write()
+                    or document.writeln() method.</li>
+                <li>Methods are identified because they always have a set of parentheses after the method name.</li>
+                <li>A browser window contains a title bar, an address bar, toolbar icons, scroll bars, status bar, and
+                    the display window called the document.</li>
+                <li>When you see the JavaScript<br />
+                    document.write();<br />
+                    it means, you are associating the write() method with the document.</li>
+                <li>The write() method is part of the browser software.</li>
+                <li>Many methods require specific communication between the parentheses.</li>
+                <li>Text placed between quotes (single or double) is called a literal string.  In JavaScript, 
+                    you can use either single or double quotes, but you must be consistent.</li>
+                <li>Page 22, step 3 shows a document.write("&lt;p&gt;Can you hear me now?&lt;/p&gt;"); statement
+                  <ul>
+                      <li>The text Can you hear me now? is contained inside of the p html tag.  This will cause<br />
+                          Can you her me now? <br />to be displayed as a paragraph.</li>
+                  </ul></li>
+                <li>When coding a literal string, you cannot just break the line and continue on the next line like you
+                    do in HTML.  
+                    <ul>
+                        <li>Page 23 shows the placement of 2 instructions on the same line.<br />
+                            <b>Warning:</b>  As this is written in the book, it is wrong.  You can have more
+                            than one instruction on a line as long as you have a semicolon after the instruction.
+                            However, the publisher did not put the complete second instruction on the line.</li>
+                         <li>When an instruction will not fit on one line of coding (this does not mean the displayed
+                            screen, this means the actual coding), you must either write multiple instructions or
+                            use the concatenation operator with one instruction.
+                            <ul>
+                                <li>Writing a literal string on as multiple instructions.
+                                    <ul>
+                                      <li>The 4th paragraph on page 23 shows the same JavaScript from page
+                                          22 written on multiple lines.</li>
+                                      <li>Notice there is a space between you and the closing quote.  The space
+                                          could go either after the you or on the next line before the hear, but
+                                          you need a space.</li>
+                                      <li>When you have only one instruction per line, the use of a semicolon is
+                                          optional.</li>
+                                    </ul></li>
+                                <li>Writing  a literal string using the concatenation operator.
+                                    <ul>
+                                      <li>The document.write() shown in the 4th paragraph could have been written
+                                          on multiple lines using one instruction.  To do this you must 
+                                          close the string on the first line, use the concatenation operator "+",
+                                          and open the string on the next line.  Either of these examples is correct:<br />
+                                          document.write("&lt;p&gt;Can you "<br />
+                                          &nbsp;&nbsp;&nbsp;+ "hear me now?&lt;/p&gt;);<br />
+                                          or <br />
+                                          document.write("&lt;p&gt;Can you " +<br />
+                                          &nbsp;&nbsp;&nbsp;"hear me now?&lt;/p&gt;);<br />
+                                          </li>
+                                    </ul></li>
+                    </ul></li> 
+                 </ul></li>   
+                   <li>The only difference between the write() and writeln() methods is that the writeln()
+                      adds a line break after the line of text.  But this only occurs when a pre tag is also
+                      used.  It is easier to just be consistent and use the write() method.</li>
+              
+            </ul></li>
+
+            <li>Case Sensitivity in JavaSript
+              <ul>
+                <li>JavaScript is case sensitive.  An uppercase letter is not the same as a lowercase letter.
+                    That means there are 52 letters in the alphabet, not 26. </li> 
+              </ul></li>             
+            <li>Adding Comments to a JavaScript Program
+              <ul>
+                <li>Use JavaScript comments to document your program.</li>
+                <li>A line comment is used to comment out from the comment to the end of the line.  It is written
+                    as two slashes // with no spaces.</li>
+                <li>A block comment is used to comment out multiple lines.  A block comment starts with a slash
+                    followed by an asterisk (no spaces).  A block comment ends with an asterisk slash */ (no spaces).</li>
+              </ul></li>
+            
+        <li>Structuring JavaScript Code
+          <ul>
+            <li>You may have multiple script tags in a page just like you can have multiple p tags.</li>
+            <li>Script tags can go in either the head or the body of a page.  The script will appear in the
+                order that you have placed the script tags.  Later you will learn to write functions in 
+                JavaScript.  Script in a function does not automatically appear in order.  It appears when
+                there is an instruction for it to run.</li>
+            <li>I highly recommend that you only put variable declarations and JavaScript functions in the head, 
+                and JavaScript that is
+                not a function in the body in the order that it appears.  Unfortunately, the book is not
+                consistent with this precedence.  I will try to notice the discrepancies and have you correct
+                the placement.  Even if something works, it is not necessarily good practice.</li>
+            <li>Variables in JavaScript are a bit different than many programming languages.  However, I will
+                follow the precedence of most languages and have you declare variables in the head.  This
+                will lead to less confusion and you can make changes as you grow as a programmer (not this semester).</li>
+          </ul></li>
+        <li>Creating a JavaScript Source File
+          <ul>
+            <li>JavaScript code can be written in a separate source file.  I had you do that in
+                validation.js.  I have not explained the workings of validation.js.  There is still a
+                lot more to cover before the explanation will make sense.  But, you can notice the example
+                of the separate js file since it is included in both your template and your index pages.</li>
+            <li>When writing a separate source file, you do not use the CDATA comments.  You show the path
+                to the source file.  For example:<br />
+                &lt;script type="text/javascript" src="scripts.js"&gt;<br />
+                &lt;/script&gt;</li>
+            <li>The book states that you cannot use XHTML elements in a JavaScript source file.  I couldn't
+                find verification of that in Google, and I have never had a problem with that.  If you
+                ever have that problem, I would like you to upload your pages, email me, and have me look at it.
+                Until I have a problem, I'm going to say "Yes you can!"</li>
+            <li>Use external source files when you are using script that you use often (for instance the
+                validation.js script).  I have you use that script on every page.  It is much easier to
+                have it as an external page and not have to write all the script over and over.</li>
+            <li>The external page does NOT have a script element.  The script element is on the page where
+                you want the JavaScript inserted.  It is found through the src attribute.</li>
+           </ul></li>              
+            <li>Using CDATA
+                <ul>
+                    <li>In order for your HTML tags to validate within your JavaScript code, you must follow the instructions shown on 
+                        (pages 46 - 49) of the JavaScript text and include CDATA sections inside of every internal script tag. (Do not use a CDATA
+                        section when you are using an external JavaScript file.  </li>
+                    <li>The browsers recognize two types of data.
+                      <ul>
+                        <li>PCDATA - parsed character data
+                          <ul>
+                            <li>Allows html tags to work and recognizes the &lt; and &gt; angle brackets as denoting an
+                                html tag.</li>
+                          </ul></li>
+                        <li>CDATA - character data
+                          <ul>
+                            <li>JavaScript can be written to include HTML elements.  But when it is, it confuses the browser
+                                because the angle brackets are recognized as PCDATA.  To instruct the browser to treat the code
+                                as CDATA you must create a block of CDATA.</li>
+                            <li>Immediately below the open script tag write<br />
+                                /* &lt;![CDATA[ */<br />
+                                Immediately before the close script tag write <br />
+                                /* ]]&gt; */</li>    
+                          </ul></li>
+                      </ul></li> 
+           </ul></li>    
+           <li>Every example in the text that uses HTML elements inside of JavaScript requires the use of the CDATA
+               directive.  Even if the book doesn't show it, you must use it.</li>
+  </ul>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

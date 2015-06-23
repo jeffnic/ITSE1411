@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Object-Oriented JavaScript Chapter 6 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+<style type="text/css">
+ol.roman{list-style-type:upper-roman;}
+ol.lalpha{list-style-type:lower-alpha;}
+ol.lroman{list-style-type:lower-roman;}
+</style>
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      <span style="font-size:smaller">JS Object-Oriented JavaScript Chapter 6 Discussion</span>
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+<div class="clearfloats"></div>
+
+<div class="leftColumn">Errata</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ol>
+          <li>Typos in text
+            <ul>
+               <li>Pages 326 and 327,
+                  <ol>
+                     <li>6th line up from the bottom of page 326
+                         there are 2 closing td tags.  Should only be 1 closing td tag.</li>
+                     <li>On page 327, after the closing bracket of the "for" loop, the last line of the page is missing.  
+                         Should be (please notify me if I am not correct)<br />
+                         calendarWin.document.write("&lt;/tr&gt;");</li>
+                     <li>On the practice for the number class in the function to calculate group rate,
+                         the math is not correct in the if clauses. It should be 49 *(.9 and .8 and .75) respectively 
+                         instead of divided by.</li>    
+                  </ol></li>
+               <li>Page 328, step 7 does not work for February during leap year.  If you substitute <br /><br />
+                   var numDays = 0;<br />
+                   numDays = daysInMonth(month, dateObject.getFullYear()); <br /><br />
+                   for step 7, then add the following function to your JavaScript, you will correct that problem.
+                   (The comments are only for explanation purposes.)<pre>
+                  // ********************************************************
+                  // the code specified for getting days of month on pg 328 
+                  // is flawed. It does not take into account whether the year
+                  // is leap year which changes the number of days in Feb
+                  // daysInMonth function takes care of days in leap and nonleap years
+                  // this snippet came from http://snippets.dzone.com/posts/show/2099
+                  function daysInMonth(iMonth, iYear)
+                  {
+                   return 32 - new Date(iYear, iMonth, 32).getDate();
+                  }
+                  // now that's an amazing function!</pre>
+               </li></ul>
+            </li>
+            <li>FYI: if toLocaleString() results in comma-delimited American-style numbers.  
+                However, IE displays it with decimals.  ex) $1,357.00
+                Firefox displays no decimals. ex) $1,357.   (Figure 6-10 shows the value with no decimal point.)<br /><br /></li>
+            <li>Vista Problems
+            <ul>
+               <li>Students have reported to me that they kept having errors.  I couldn't see the errors.  I found this has to do with Windows Vista and the "Computer" 
+                   zone security vs. Internet security and "protected mode".  One web site says to turn protected mode on for your 
+                   local zone, while another site cautions about what a bad idea that is.  
+                   When uploaded to the linux, it works fine from there.<br /><br />
+                   Therefore, if you keep getting unexplained errors and you are using Vista, please upload to the class server and see if the 
+                   error still exists.</li>
+            </ul></li>
+   </ol>
+</div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+<div class="rightColumn">
+      <ol>
+          <li>JavaScript Objects
+          <ul>
+            <li>Object-oriented programming (called OOP) allows you to reuse code without having to copy or recreate it.</li>
+            <li>OOP refers to the creation of reusable software objects that can be easily incorporated into multiple programs.</li>
+            <li>Objects (called components) specifically refer to the programming code and data that can be treated as an individual unit or component.</li>
+            <li>An object on a page can be as simple as a button.</li>
+          </ul></li>
+          <li>Encapsulation
+          <ul>
+            <li>Encapsulation is the process of bundling data with the methods (or other functions) operating on that data.</li>
+            <li>Encapsulation is sometimes called a black box because it allows for information hiding by restricting access to methods and properties.</li>
+          </ul></li>
+          <li>Garbage Collection
+          <ul>
+            <li>Garbage collection refers to reclaiming memory that is reserved by a program.  Creating variables and objects reserves computer memory.  JavaScript
+                does not require that the program release memory.  This is done automatically. </li>
+           </ul></li>
+         <li>Using the Date Class
+            <ul>
+               <li>To use the Date class you need to define objects of that type. Defining the object is similar to defining an array.</li>
+               <li>Used to work with dates and times.</li>
+               <li>Automatically holds the current date and time as its initial value.</li>
+               <li>Example of instantiating the Date Object (which will default to the current date):
+                  <ul>
+                     <li>var currentDate=new Date(); </li>
+                  </ul></li> 
+               <li>Example of overriding the default value with June 15, 2009 (see pages 320 - 321  for commonly used methods):  
+                  <ul>
+                     <li>var anotherDate=new Date();<br />
+                         anotherDate.setDate(15);<br />
+                         anotherDate.setMonth(5); // January = 0<br />        
+                         anotherDate.setFullYear(2009);
+                     </li>
+                  </ul></li>
+               <li>Example of comparing currentDate to anotherDate:
+                  <ul>
+                     <li> if (currentDate &lt; anotherDate)<br />      
+                          &nbsp;&nbsp;&nbsp;window.alert(&quot;The current date is before June 15, 2009&quot;);<br />
+                          else<br /> 
+                          &nbsp;&nbsp;&nbsp;window.alert(&quot;The current date is either June 15, 2009 or after June 15, 2009&quot;);</li>
+                  </ul></li>
+               <li>Example of changing the date to yesterday:
+                  <ul>
+                     <li>anotherDate.setDate(anotherDate.getDate()-1);</li>
+                     <li>If subtracting one day from the date causes the date to be in the preceding month and/or year, the changes to the month and year 
+                         portions of the date are handled automatically by the date class itself.</li>
+                  </ul></li>
+            </ul></li>
+      <li>The Number Class
+      <ul>
+        <li>Used to define, manipulate, and modify numeric values</li>
+        <li>Defines methods such as toFixed(), toPrecision(), toString(), valueOf(), toExponential(), Number(), toLocaleString()</li>
+        <li>Defines special values such as MAX_VALUE, MIN_VALUE, NaN, NEGATIVE_INFINITY, POSITIVE_INFINITY</li>
+      </ul></li>
+      <li>The Math Class
+      <ul>
+         <li>Used to perform mathematical calculations in your program.</li>
+         <li>The Math class does not contain a constructor. You use the Math object and one of its methods directly in your code.  For example:<br /><br />
+             squareRoot = Math.sqrt(144);<br /><br />
+             would assign 12 to the variable squareRoot.</li>
+      </ul></li>
+      <li>Custom  JavaScript Objects
+      <ul>
+         <li>JavaScript allows custom objects, but they are not encapsulated.</li>
+         <li>You may use standard functions and variables or create custom objects to perform the same functionality.  Using custom objects to
+             create self-contained objects makes programming easier.</li>
+         <li>The following is an example to create a custom object:<br /><br />
+             var objectName = {};<br /><br /></li>
+         <li>You can assign properties to the object by appending the property name to the object name with a period.</li>
+         <li>To create custom objects that contain methods, you must use constructor functions.</li>
+      </ul></li>
+  </ol>
+
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

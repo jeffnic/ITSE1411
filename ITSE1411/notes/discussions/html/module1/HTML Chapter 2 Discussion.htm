@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion HTML Chapter 2 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       HTML Chapter 2 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ul>
+      <li>HTML Basics
+      <ul>
+            <li>h tags - heading.
+               <ul>
+                  <li>Designated as h1 (the largest), h2, h3, h4, h5, and h6 (the smallest).</li>
+                  <li>Do not confuse the heading tag with the head section of the page.</li>
+                  <li>A heading tag is usually used in titles and is written as a "block" of text.</li>
+                  <li>The default of a heading tag is a bold font weight.</li>
+                  <li>Use heading tags to structure the page and aid in accessibility and usability.</li>
+               </ul></li>
+            <li>p tag - paragraph.
+               <ul>
+                  <li>Renders as a block display with space above an below the block.  (You do not need
+                      to add the double-spaced line after the end of a paragraph.)</li>
+                  <li>The default alignment for the p tag is left alignment.  Overriding the left alignment can be configured by CSS.</li>
+               </ul></li>
+            <li>br tag - line break.
+               <ul>
+                  <li>The line break element causes the browser to advance to the next line.</li>
+                  <li>The br tag is self-closing and is written in XHTML as &lt;br /&gt; and in HTML 5 &lt;br&gt;  The JavaScript text
+                      is written using XHTML.  When copying code from that text, you will need to use &lt;br /&gt; in order to validate the page.
+                      Both &lt;br /&gt; and  &lt;br&gt; validate in HTML5.</li>
+               </ul></li>
+            <li>hr tag - horizontal rule.
+               <ul>
+                  <li>The horizontal rule is used to draw a line across the page.</li>
+                  <li>The hr tag is self-closing and is written in XHTML as &lt;hr /&gt; and in HTML 5 as &lt;hr&gt;  The same situation exists with
+                      our JavaScript text with the horizontal rule as the break tag.</li>
+               </ul></li>  
+            <li>blockquote tag - blockquote.
+               <ul>
+                  <li>Formats as a blockquote (margins indented on both sides of the text).</li>
+               </ul></li>
+            <li>Phrase elements.
+               <ul>
+                  <li>Also called logical or inline level elements</li>
+                  <li>Must be contained in a block level  element.</li>
+                  <li>Table 2.1 on page 34 of your text shows phrase elements.  Examples of often used phrase
+                      elements described below.
+                      <ul>
+                        <li>Typically contain text and other inline elements.</li>
+                        <li>When rendered visually, do not usually begin on a new line.</li>           
+                      </ul></li>  <!-- closes Table 2.1 discussion -->
+              </ul></li>  <!-- closes phrase element discussion -->
+            <li>Ordered Lists
+               <ul>
+                  <li>The ordered list tag is used for numbering or lettering (like in an outline) for lists.  It is written
+                      &lt;ol&gt; and has a closing tag &lt;/ol&gt;</li>
+                  <li>Each "bullet" in the ordered list has the &lt;li&gt; (list item) tag with a closing tag &lt;/li&gt;</li>                 
+                  <li>The type attribute is <b>not</b> deprecated in HTML 5 for ordered lists.  Check table 2.3, page 36 of your Design
+                      text for the type values for ordered lists.</li>
+                  <li>The type attribute (when used) goes in the &lt;ol&gt; tag and can be written<br />
+                      &lt;ol type=&quot;A&quot;&gt;</li>
+                  <li>In HTML5 you can use the reversed attribute to indicate descending order.</li>
+                  <li>The ordered list is written as a block display.</li>
+               </ul></li>
+            <li>Unordered Lists
+               <ul>
+                  <li>The tag to describe that an unordered list is to be included is written &lt;ul&gt;  When
+                      the list is completed you have a closing tag written &lt;/ul&gt;</li>
+                  <li>Each "bullet" in the unordered list has the &lt;li&gt; (list item) tag with a closing tag &lt;/li&gt;</li>
+                  <li>The type attribute to change the default of the bullet is <b>deprecated</b> in HTML 5; therefore,
+                      we will not use the type attribute and use CSS to change the look of the bullet.</li>
+                </ul></li>
+            <li>Description or Definition Lists
+               <ul>
+                  <li>Description lists are used to organize terms and descriptions.  The tag to define the description list
+                      is written &lt;dl&gt;  The closing tag is &lt;/dl&gt;</li>
+                  <li>Once a description list is defined, the term uses the &lt;dt&gt; tag and the closing tag &lt;/dt&gt; tag.</li>
+                  <li>The term description uses the &lt;dd&gt; tag and the closing tag &lt;/dd&gt;</li>
+               </ul></li>
+            <li>Special Entity Characters
+               <ul>
+                  <li>Since some characters have special meaning in HTML, you cannot include them in a line of code.  You
+                      must instead use code that shows the character.  The character that is most used is the non-breaking space.
+                      When you add white space in HTML, that white space is collapsed into 1 space.  This is very convenient
+                      except when you actually want more than one space.  To get more than one space to render, you
+                      must code &amp;nbsp; for each space.  Do not forget the semicolon ";".  Some browsers will forgive the
+                      missing semicolon ";" but some browsers will actually write &amp;nbsp on the page instead of the space.</li>
+                  <li>Table 2.4 on page 42 of the design text shows you more character entities.  Additionally, from my 
+                      home page, I link to a more complete reference on the left column of my page.</li>
+               </ul></li>
+            <li>HTML Syntax Validation
+               <ul>
+                  <li>The W3C has a free Markup Validation Service to check for syntax errors.  Invalid pages could have side-effects on other code and
+                      often renders the page slower.</li>
+               </ul></li>
+            <li>Div and Span Elements
+               <ul>
+                  <li>The div and span elements are both used to describe parts of a document that have no other specific
+                      method of description.</li>
+                  <li>The div element defines a division or a section in HTML.  When you close a div, it acts as a line
+                      break.  However, multiple divs in a row (with nothing inside) does not create multiple line breaks.</li>
+                  <li>The span element in an inline element is used to define an area of text.  No line break occurs when using 
+                      the span element.</li>
+                  <li>The Design text defines the Span element in Chapter 4 on page 116.  However, I find it more logical
+                      to discuss the div and span elements at the same time.</li>
+               </ul></li>
+            <li>Header Element
+               <ul>
+                  <li>New to HTML5.  Used to contain the headings of either a web page document or an area within the document.</li>
+                  <li>The block display tag is written &lt;header&gt; and &lt;/header&gt;</li>
+               </ul></li>
+            <li>Nav Element
+               <ul>
+                  <li>New to HTML5.  Used to contain a section of navigation links.</li>
+                  <li>The block display tag is written &lt;nav&gt; and &lt;/nav&gt;</li>
+               </ul></li>
+            <li>Footer Element
+               <ul>
+                  <li>New to HTML5.  Used to contain the fotter content of a web page or an area within the document.</li>
+                  <li>The block display tag is written &lt;footer&gt; and &lt;/footer&gt;</li>
+               </ul></li>
+            <li>Anchor Element
+               <ul>
+                  <li>The anchor tag used to define a hyperlink</li>
+                  <li>The anchor begins with &lt;a&gt; and ends with &lt;/a&gt; and is used to surround the text or image that the user can click
+                      to perform the link.</li>
+               </ul></li> 
+            <li>Target Attribute
+               <ul>
+                  <li>The target attribute has been redefined in HTML5.</li>
+                  <li>To open your link in a new browser window or tab, use target="_blank".  The decision for either a window or tab is determined by the user.</li>
+                  <li>A reminder, our JavaScript text used XHTML.  When validating XHTML, the target attribute is a validation error.</li>
+               </ul></li>
+            <li>Absolute Hyperlinks
+               <ul>         
+                  <li>When a url contains a full Internet address, it is called an absolute path or absolute link.</li>
+                  <li>When you are linking to a page located on a different server, you must always use an absolute link.</li>
+                  <li>The explanation of an absolute link is
+                     <ul>
+                        <li>The attribute href stands for hyperlink reference and is assigned the address of
+                            the link.</li>
+                        <li>url (Uniform Resource Locator or Universal Resource Locator) is the address of the link. An example of the
+                            standard form of an address to a page is<br />
+                            http://www.austincc.edu/jscholl/<br /></li>
+                        <li>http means HyperTextTransferProtocol</li>
+                        <li>:// is a separator between the protocol and the address</li>
+                        <li>www stands for World Wide Web</li>
+                        <li>austincc is the domain name for Austin Community College</li>
+                        <li>edu is the domain extension and describes the domain as being an educational institution</li>
+                        <li>/ is another separator and designates another folder</li>
+                        <li>jscholl is my account on the Austin Community College server and has the name jscholl</li>                 
+                     </ul></li>
+               </ul></li>
+            <li>Relative Hyperlink
+               <ul>
+                  <li>When pages or files are stored on the same server as your page resides, you can use a relative path or relative link.</li>
+                  <li>The explanation of a relative link is
+                     <ul>
+                        <li>&lt;a href="somePage.htm"&gt;. Some page on the same server in the same folder&lt;/a&gt;<br />
+                            &lt;a href="subfolder/somePage.htm"&gt;Some page on the same server in a sub folder of the current folder&lt;/a&gt;<br />
+                            &lt;a href="../somePage.htm"&gt;Some page on the same server in a folder above the current folder&lt;/a&gt;</li>
+                        <li>Use the / separator for each folder in the path.</li>
+                        <li>Use ../ for each hierarchical level higher than the current folder.  For example you could link to the
+                            testing center page using the relative link from one of my pages to the testing center pages because
+                            they are on the same server.
+                            <ol>
+                              <li>From the page<br />
+                                  http://www.austincc.edu/jscholl/summer2009/javascript/teachers/HTML/links.htm <br />
+                                  use<br />
+                                  &lt;a href="../../../../../testctr/hours.php</li>
+                              <li>from the page<br />
+                                  http://www.austincc.edu/jscholl <br />
+                                  use<br />
+                                  &lt;a href="../testctr/hours.php</li>
+                            </ol></li>         
+                     </ul></li>
+               </ul></li>
+            <li>Block Anchor
+               <ul>
+                  <li>The block anchor is new to HTML5.</li>
+                  <li>Used to configure one or more entire elements as a hyperlink.</li>
+               </ul></li>
+            <li>Accessibility and Hyperlinks
+               <ul>
+                  <li>To be more meaningful to the user, it is important that the link description is informative.  This is particularly true when the
+                      user is using a screen reader.</li>
+               </ul></li>
+      </ul></li>
+      <li>Site Map
+         <ul>
+            <li>A site map represents the structure, or organization, of pages ina a website visually.</li>
+         </ul></li>
+      <li>Email links
+         <ul>
+            <li>The mailto link is not as valuable as it once was since many users do not configure their computers to 
+                associate with a mail program and  Internet Explorer does not allow the body of a message to 
+                send through a form using HTML and JavaScript.  Most mail coding is now done through server-side scripting.
+                FYI, the link checker does not check mailto links.</li>
+         </ul></li>
+      <li>Wireframes and Page Layout
+             <ul>
+                 <li>A wireframe (page schematic or screen blueprint) describes the structure (skeletal framework) of
+                     basic page elements.</li>
+                 <li>Used in web design for page layout.</li>
+                 <li>The exact content is not required.<br /><br /></li>
+             </ul></li>
+      </ul>
+      <li>Linking to a specific place on a page uses a fragment identifier (also called named fragment or
+          fragment id).
+          <ul>
+            <li>A fragment identifier requires 2 parts.
+               <ol>
+                  <li>The tag that identifies the fragment of a web page (the location on the page where 
+                      the link is going).
+                      The tag must be assigned to an id.  For example &lt;div id = "content"&gt;</li>
+                  <li>The anchor tag that links to the fragment id.</li>
+               </ol></li>
+            <li>For example view your index.htm
+               <ul>
+                  <li>The menu at the top of the page links to locations within the page.</li>
+                  <li>View the source code of your index page.<br />
+                      The menu code links to different locations on the page<br />
+                      &lt;a href="#template"&gt;template&lt;/a&gt;  |<br />
+                      &lt;a href="#module1"&gt;Module 1&lt;/a&gt;  |</li>
+                  <li>Each location is coded with an anchor and an id, for example:<br />
+                      &lt;p id="template"&gt;&lt;a href="template/template.htm"&gt;template&lt;/a&gt;</li> 
+                  <li>You can link to a specific location on a different page as long as the specific location has an id and
+                      you add the # and the name to the end of the address in the link.</li>
+               </ul></li>
+          </ul></li>
+</div>  <!-- closes rightcolumn div  -->
+<div class="clearfloats"></div>
+
+
+</div>  <!-- closes page content div  0-->
+</body>
+</html>

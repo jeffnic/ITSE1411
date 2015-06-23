@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion More CSS Basics Chapter 6 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       More CSS Basics Chapter 6  
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <table border="1px">
+            <tr><th>Font Properties</th><th>Purpose</th></tr>
+            <tr><td>font-family</td><td>Each browser has it's own set of font typefaces.  If a typeface has not been installed on your computer
+                    or if it is not one recognized by your browser, the default font is Times New Roman.<br />Multiple fonts can be listed in
+                    case one choice is not installed.  The selection is made left to right.</td></tr>
+            <tr><td>font-size</td><td>The font-size property sets the size of the font.<br />The value measurements can be scaled, be set by
+                    units of measure, or set by a percentage.</td></tr>
+            <tr><td>font-weight</td><td>The font-weight property configures the boldness of the text.<br />The font-style property configures the style such as
+                    italic, normal, and oblique.</td></tr>
+            <tr><td>font-style</td><td>The font-style property configures the font in normal, italic, and oblique.</td></tr>
+            <tr><td>text-transform</td><td>The text-transform property configures the capitalization of text as none, capitalize, uppercase, or lowercase.</td></tr>
+            <tr><td>line-height</td><td>The line-height property modifies the default height of a line.</td></tr>
+            <tr><td>text-align</td><td>The text-align property configures the alignment of text.</td></tr>
+            <tr><td>text-indent</td><td>The text-indent property configures the indentation of the first line of text within an element.  The
+                    value can be either numeric or a percentage.</td></tr>
+            <tr><td>width</td><td>The width property configures the width of an element's parent element, not the width of the actual content.</td></tr>
+            <tr><td>min-width</td><td>The min-width property sets the minimum width of an element's content with either a numeric value or
+                    a percentage.</td></tr>
+            <tr><td>max-width</td><td>The max-width property sets the maximum with of an element' content with either a numeric value unit
+                    or a percentage.</td></tr>
+            <tr><td>height</td><td>The height property configures the height of an element's parent content, not the height of the actual content</td></tr>
+      </table>
+      <p></p>
+      <div>
+    
+      <table border="1px">
+            <caption>The CSS box model is essentially a box that wraps around HTML elements, and it consists of: margins, borders, padding, and the actual content.
+                   The box model allows us to place a border around elements and space elements in relation to other elements. With an understanding of the box
+                   model, and some background in positioning elements, you can layout your page to look the same on all browsers.  To apply CSS to an entire page,
+                   use a div element with an id to contain the entire page.</caption>
+            <tr><th>Box Model Properties</th><th>Purpose</th></tr>
+            <tr><td>content</td><td>The content area can be images, paragraphs, headings, lists, etc.  The visible width is the total of the content width,
+                    the padding width, and the border width.  The width property, as mentioned in the table above, only configures the width of the content</td></tr>
+            <tr><td>padding</td><td>The padding area is between the content and the border.  The padding property configures the space between the content
+                    and the border.  You can work with each side individually using the properties:<br />
+                    padding-bottom, padding-left, padding-right, padding-top.  You can also work with the size, style, and color of the border using:<br />
+                    border-width, border-style, and border-color.</td></tr>
+            <tr><td>border</td><td>The border area is between the padding and the margin. It is the boundary of an element. You can work with
+                    each side of the border individually, as well as the style and color.</td></tr>
+            <tr><td>margin</td><td>The margin is the empty space between the element and the adjacent element. The margin property configures the area
+                    surrounding the element.
+                    <ol>
+                        <li>You can work with each side individually using the properties:<br />
+                            margin-bottom, margin-left, margin-right, and margin-top.</li>
+
+                    </ol></td></tr>
+            <tr><td>CSS3 Rounded Corners</td><td>The new CSS border-radius allows the use of rounded corner so that your page doesn't look "boxy".
+                    Not all browsers will support the border-radius property.  However, if a browser doesn't recognize a property, that
+                    property is ignored, so you can still use the radius property.</td></tr>
+            <tr><td>Center Page Content with CSS</td><td>You can use the auto value with the margin property to center a page.  Refer to the id of
+                    the entire page div and assign the value auto to both the margin-left and margin-right properties.  This will leave an equal
+                    amount of space to both the left and right margins.</td></tr>
+      </table>
+      <table border="1px" width="100%">
+            <tr><th>CSS3 Properties</th><th>Purpose</th></tr>
+            <tr><td>box-shadow</td><td>The box-shadow property is used to create a shadow effect on the box model.  IE 9 does
+                    not support the text-shadow property. 
+                  <table border="1px" width="100%">
+                        <tr><th>value</th><th>purpose</th></tr>
+                        <tr><td>horizontal offset</td><td>Positive value configures shadow on the right.<br />
+                                                   Negative value configures shadow on the left.</td></tr>
+                        <tr><td>vertical offset</td><td>Positive value configures shadow below.<br />
+                                                   Negative value configures shadow above.</td></tr>
+                        <tr><td>blur radius</td><td>Higher values configure more blur.<br />
+                                                    Zero configures a sharp shadow.</td></tr>
+                        <tr><td>spread distance</td>Positive value configures the shadow to expand.<br />
+                                                    Negative value configures the shadow to contract.</tr>
+                        <tr><td>color value</td><td>any valid color value</td></tr>
+                  </table>  
+            </td></tr>
+            <tr><td>text-shadow</td><td>The text-shadow property is used to create a shadow effect on the text.  
+                  <table border="1px" width="100%">
+                        <tr><th>value</th><th>purpose</th></tr>
+                        <tr><td>horizontal offset</td><td>Positive value configures shadow on the right.<br />
+                                                   Negative value configures shadow on the left.</td></tr>
+                        <tr><td>vertical offset</td><td>Positive value configures shadow below.<br />
+                                                   Negative value configures shadow above.</td></tr>
+                        <tr><td>blur radius</td><td>Higher values configure more blur.<br />
+                                                    Zero configures a sharp shadow.</td></tr>
+                        <tr><td>color value</td><td>any valid color value</td></tr>
+                  </table>  
+            </td></tr>
+            <tr><td>background clip</td><td>Confines the display of the background image.
+                                        <table border="1px" width="100%">
+                                          <tr><td>content-box</td><td>Clips off the image's display to fit the area behind the content.</td></tr>
+                                          <tr><td>padding-box</td><td>Clips off the image's display to fit the area behind the content and padding.</td></tr>
+                                          <tr><td>border-box (default)</td><td>Clips off the image's display to fit the area behind the content, padding, and border.</td></tr>
+                                        </table></td></tr>
+            <tr><td>background-origin</td><td>Positions the background image:
+                                        <table border="1px" width="100%">
+                                          <tr><td>content-box</td><td>Positions relative to the content area.</td></tr>
+                                          <tr><td>padding-box (default)</td><td>Positions relative to the padding area.</td></tr>
+                                          <tr><td>border-box</td><td>Positions relative tot he border area.</td></tr>
+                                        </table></td></tr>
+            <tr><td>background-size</td><td>Can be used to resize or scale the background image.
+                                        <table border="1px" width="100%">
+                                          <tr><td>percentage values</td><td>width, height</td></tr>
+                                          <tr><td>pixel values</td><td>width, height</td></tr>
+                                          <tr><td>cover</td><td>Preserves aspect ratio as it scales the background image to the smallest size 
+                                                                for which both the height and width can completely cover the area</td></tr>
+                                          <tr><td>contain</td><td>Preserves aspect ratio as it scales the background image to the largest size
+                                                                for which both the height and width will fit within the area.</td></tr>
+                                        </table></td></tr>
+            <tr><td>opacity</td><td>The opacity property configures the transparency of the background color.  Values range from 0 - 1.</td></tr>
+            <tr><td>RGBA color</td><td>CSS3 added transparent color, RGBA color.  The "a" stands for alpha and provide the transparency color.
+                    The alpha color ranges from 0 to 1.</td></tr>
+            <tr><td>HSLA color</td><td>Hue, Saturation, Lightness and Alpha color
+                                   <table border="1px" width="100%">
+                                      <tr><td>Hue</td><td>Numeric color value from 0 to 360.  Red is both 0 and 360.  Green is 120.  Blue is 240.
+                                                          Use 0 to configure black, gray, and white.</td></tr>
+                                      <tr><td>Saturation</td><td>Configures the intensity and uses percentage.  </td></tr>
+                                      <tr><td>Lightness</td><td>Determines the brightness or darkness and uses percentage values.</td></tr>
+                                      <tr><td>Alpha</td><td>Represents the transparency of the color and ranges from 0 (transparent) to 1 (opaque).</td></tr>
+                                   </table></td></tr>
+            <tr><td>gradients</td><td>The gradient property configures a smooth  blending of shades from one color to another.  This is not
+                    yet supported.</td></tr>            
+      </table>
+        
+</div></div></div>
+
+
+</body>
+</html>

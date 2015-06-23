@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Assignment JS Module 4 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       JS Module 4 Assignment
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Assignment</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+     <ul>
+        <li>Using the Date Class
+          <ul> 
+            <li>windSurfing.htm Page
+              <ul>
+                <li>Download, unzip, and extract the files for the WindSurfer Page
+                <a href="http://www.austincc.edu/jscholl/1411/WS%20code/Chapter6Files.zip">
+                    Chapter 6 Files zipped</a> and save in your module4 folder.</li> 
+                <li>Using these files, complete step 1, Page 323.</li>
+                <li>I recommend when you change starting files, you rename them so that you always maintain
+                    a history of your work.  Save index.html as windSurfing1.htm in your module4 folder. (Notice the addition of the number 1 in the
+                    name of the file.  You can set your default choice for either htm or html.
+                    When I provide a file provided with the text, it will have the extension html.  I save my
+                    work as .htm so that I can tell at a glance if I am working with the starting file or
+                    a file I have changed.  You choose the method that works best for you.)</li>
+                <li>I have entered much of the code in hopes that you will spend your time studying the code rather than keying it all in and 
+                    searching for typos.  Please notify me if you find typos in my pages so that I can make corrections.
+                    <ol>
+                      <li>I have provided the coding for:<br />
+                          <a href="http://www.austincc.edu/jscholl/1411/WS%20code/pg323step2_3.htm">page 323 steps 2 and 3</a><br />
+                          (The index page from Chapter 6 Files zipped has a close form tag.  You only want one
+                          close form tag.)<br />
+                          Additionally, I renamed "FormProcessor.html" to "windProcessor.htm".
+                          <a href="http://www.austincc.edu/jscholl/1411/WS%20code/pg324step4_5_6.htm">page 324 steps 4, 5, and 6</a></li>
+                      <li>Save in the module4 folder.  Your page should validate.
+                          View your page by clicking the preview tab on the right.     
+                          Open your page in your browser.  It should look like Figure 6-6 on page 325.</li>
+                    </ol></li>
+                <li>Continue with your windSurfing1.htm page and save as windSurfing2.htm.  
+                    <ol>  
+                      <li>Step 1 on page 325 is to open index.html.  Use windSurfing2.htm instead.</li>
+                      <li>Step 2 is to add a link that calls the displayCalendar() function.  I think the location
+                          where to put it is a little confusing.  Find your form tag.  You
+                          will then see a table, a tr, a td, then inside that td is an
+                          h3 tag and a p tag. That is the p tag where you are supposed to 
+                          add the code.  After the input tag and before the close p tag.  The code is:<pre>
+    &lt;a href="" onclick="displayCalendar(); return false"&gt;Select Date&lt;/a&gt;</pre></li>   
+                      <li>For steps 3 - 11, I have provided the coding for displayCalendar() but be sure to study
+                          the instructions for the explanation of each section of code.  I wrote the code in 
+                          javaScript.  And, with my desire for strict compatibility, I added backslashes '\'
+                          before all slashes '/' and backslashes '\' as required in strict validation.  
+                          Since this is js and not html, it may not come up in your browser window and may require
+                          that you save and then open the file.  If you download, then you will need to open 
+                          the downloaded file.  If it shows in your browser, then you can simply copy paste it into 
+                          the head section of windSurfer2.htm page.<br />
+                          <a href="http://www.austincc.edu/jscholl/1411/WS%20code/displayCalendar.js">pages 325 through 329, adding the displayCalendar()
+                          function</a>.</li>
+                    </ol></li>
+                <li>Continue with your windSurfing2.htm page and save as windSurfing3.htm.
+                    <ol>
+                      <li>Step 1 on page 330 is to open index.html.  Use the windSurfing3.htm instead.</li>
+                      <li>Step 2 is to replace the function heading.  I actually included that with windSurfing2.htm
+                          because it was just easier to do it that way.</li>
+                      <li>I have provided the coding for:<br />
+                          <a href="http://www.austincc.edu/jscholl/1411/WS%20code/pg331step3_4.htm">page 331, steps 3 and 4</a><br />
+                          (The text has 2 closing td tags in step 3.  I corrected that.)</li>
+                      <li>Open the page in your browser.  It should look like Figure 6-8 on page 332.</li>
+                      <li>Test your links as shown in step 6.</li>
+                    </ol></li>
+              </ul></li>
+          </ul></li>
+        <li>Accessing Number Class Properties 
+          <ul>
+            <li>Continue with your windSurfing3.htm page and save as windSurfing4.htm
+              <ol>
+                  <li>Step 1 on page 335 is to open index.html. Use the windSurfing4.htm instead.</li>
+                  <li>Add the coding page 335, step 2.</li>
+                  <li>The following code is the code in step 3:<pre>
+function calcGroupDiscount(groupSize) {
+var dailyRate = 49;
+   if (groupSize > 5 &amp;&amp; groupSize &lt;= 10)
+     dailyRate = 49 * 0.9;
+   else if (groupSize > 10 &amp;&amp; groupSize &lt; 25)
+     dailyRate = 49 * 0.8;
+   else if (groupSize > 24)
+     dailyRate = 49 * 0.75; 
+   var groupRate = groupSize * dailyRate;
+   document.forms[0].discount.value = groupRate;
+}</pre></li>
+                  <li>Complete steps 4 - 7.</li> 
+                  <li>Test your page in your browser.  Compare your page to Figure 6-9, page 336.</li>
+              </ol></li>
+          </ul></li>
+    </ul>
+  
+    <ul>
+        <li>Using Math Class Methods
+          <ul> 
+            <li>Continue with your windSurfing4.htm page and save as windSurfing5.htm.
+              <ul>
+                  <li>Step 1 on page 339 is to open index.html. Use the windSurfing5.htm instead.</li>
+                  <li>Add the coding page 339, step 2.</li>
+                  <li>Add the coding page 339, step 3.</li>
+                  <li>Test your page in your browser.  Compare your page to Figure 6-10, page 340.  You
+                      will not have a comma in the group rate amount. If you want to add the comma use:<br />
+                      (.toLocaleString)</li>
+              </ul></li>
+          </ul></li>
+        <li>Declaring Basic Custom Objects
+          <ul> 
+            <li>Continue with your windSurfing5.htm page and save as windSurfing6.htm.
+              <ul>
+                  <li>Step 1 on page 342 is to open index.html. Use the windSurfing6.htm instead. </li>
+                  <li>Add the coding page 343, step 2.</li>
+                  <li>Add the coding page 343, step 3.</li>
+                  <li>Test your page in your browser.  Compare your page to Figure 6-12, page 344.</li>
+              </ul></li>
+          </ul></li>
+      <li>Update your project pages
+         <ul>
+            <li>Be sure that all your project pages use the same css.  Make sure that there are no unbroken links.  You can do this by
+                copying the URL of the project home page, clicking on link checker, and pasting the URL into the text box on the link checker page.  Then in the
+                box next to  "Check linked documents recursively, recursion depth:" put a 5.  That will actually check every link on your site up to
+                5 levels.  You will then be able to check that there are no unbroken links.  If you link to pages that you have not created, either delete
+                the broken links or create pages for your links to link to.  Remember this project is to be part of your portfolio and you want it
+                to be attractive.</li>     
+         </ul></li>  
+      <li>Update index page with links
+               <ul>
+                  <li>Open your index.htm page in Komodo Edit.</li>
+                  <li>Update your index.htm page to link to your pages in your module4 folder. </li>
+                  <li>Upload your index.htm page and your module4 folder.  (Be sure that you update all images and pages associated with the Coast City
+                      Windsurfing site.)</li>
+                  <li>Be sure to test for validation.</li>
+                  <li>Email jscholl@austincc.edu for grading.</li>
+             </ul></li>  
+    </ul>      
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Function Syntax Chapter 2 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      JS Function Syntax Module 2 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ul>
+     <li>Creating a JavaScript function
+            <ul>
+                <li>Statements can be grouped and only executed when instructed "called".  </li>
+                <li>The syntax for writing a function is<pre>
+             function name_of_function(parameters)
+             {
+               statements;
+             }</pre></li>
+                <li>The text uses the syntax of placing the open curly brace after the close parenthesis
+                    of the parameter list.  You may choose whichever syntax you wish; however, it is much
+                    easier to find errors when you align your open curly brace with your close curly brace.</li>
+                <li>A parameter is a new variable in the function that receives a value from a function call.
+                    The data type of the new variable is the same as the value being sent.</li>
+                <li>Statements that belong in the function are contained inside a set of curly braces.</li>
+                <li>Although not required, it is conventional to place functions in the head section of
+                    an HTML page.  A function must be created before it is called.  By creating a function in
+                    the head, it is always created before called.</li>
+            </ul></li>
+       <li>Calling a JavaScript function
+            <ul>
+                  <li>A function is only executed when called from somewhere else in the page.  </li>
+                  <li>Some functions perform a specific task and then ends.  Other functions perform a
+                      specific task and then return a single value.  Each type of function call has a
+                      different syntax.
+                        <ul>
+                              <li>A function that performs a specific task and then ends has the following
+                                  syntax for the call:<pre>
+             name_of_function(arguments);</pre></li>
+                              <li>A function that performs a specific task and then returns a value has
+                                  the following syntax for the call:<pre>
+             variable_name = name_of_function(arguments);</pre></li>                                 </pre></li>
+                        </ul></li>
+                  <li>A function that returns a value does so with a return statement.  The syntax for
+                      a return statement is:<pre>
+                   return some_value;</pre></li>
+            </ul>   
+       </li>
+       <li>Understanding variable scope
+            <ul>
+                  <li>The scope of a variable is the context of when the variable name can be used.</li>
+                  <li>A global variable is known from the location the variable is declared throughout
+                      the rest of the page.  You should declare your global variables at the top of
+                      the JavaScript code in the head of your page.</li>
+                  <li>A local variable is declared inside a function (including the parameter list)
+                      and is only known by that name within the function in which it is declared.</li>
+                  <li>It is not recommended to use the same variable name for a global variable as
+                      a local variable, but when it is done, the global variable is not known
+                      within the function, only the local variable is known. </li>
+                  <li>Technically, the keyword var is not required for global variables but
+                      can be used.  The keyword var is required for a local variable.  When a var
+                      is not used in a function, then the variable becomes global.  It is highly
+                      recommended that you do not create global variables inside a function as this
+                      can cause considerable confusion in the program.</li>
+            </ul></li>
+       <li>Using built-in JavaScript functions
+            <ul>
+                  <li>Built-in JavaScript functions are called the same way you call a user-defined
+                      function. Built-in functions will be explained as they are needed throughout the course.
+                        <ul>
+                              <li>One function used often is isNaN() that stands for is not a number.
+                                  When a user enters data into a text box, that data is ALWAYS text.  When
+                                  you require that the data entered is numeric, you can test the entered
+                                  data with the isNaN() function.  Then, if the data is all numeric, you
+                                  can convert the text into either a float number using the parseFloat()
+                                  function, or into an integer using the parseInt() function.</li>
+                        </ul>
+                  </li>
+            </ul>
+       </li>   
+  </ul>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

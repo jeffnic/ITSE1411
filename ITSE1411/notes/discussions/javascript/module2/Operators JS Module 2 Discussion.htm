@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion JS Operators Chapter 2 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+      Operators JS Module 2 Discussion
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn"> 
+  <ol>
+
+      <li>Javascript has the following operators
+            <ul>
+                <li>Arithmetic operators in JavaScript are very similar to the ones you learned in mathematics with a few exceptions.  In
+                    JavaScript, the only operator for multiplication is the '*' asterisk.  Addition, subtraction, multiplication,
+                    division, and negation are the same.  There are 3 additional arithmetic operators that are handy.  When you want
+                    to increase a variable by 1, you may use the '++' increment operator.  Placed before or after the variable, it will
+                    increment the variable by 1.  The order this is done will be discussed later in precedence.  The last arithmetic
+                    operator helps you find the remainder of a division.  It is called the modulus operator and is written as '%'.
+                    You have used '%' in the past as a substitute for the word "percent".  However, in JavaScript it is an operator that
+                    gives you the remainder.  For example:<br /><br />
+                    Consider 5/2. The answer is 2 because 5 divided by 2 is 2. <br />
+                    Consider 5%2. The answer is 1 because after you divide 5 by 2, you have a remainder of 1.</li>
+                <li>The assignment operator in JavaScript is written '='.  In math, you used the symbol in an equation.  There are NO
+                    equations in JavaScript.  There are expressions (which are evaluated).  The result of an evaluated expression can
+                    then be assigned to a variable using the '=' assignment operator.  Assignments always assign right to left, the expression
+                    on the right side of the assignment operator and a single variable on the left side of the assignment operator.<br /><br />
+                    The assignment operator combined with an arithmetic operator is called a compound assignment.  The compound assignment
+                    works for addtion, subtraction, multiplication, division, and modules. The value to the right of the operation performs
+                    the task of the arithmetic operator with the variable to the left of the operator.</li>
+                <li>Comparison operators compares two operands and returns the Boolean value true or false depending on the result of the
+                    comparison.  The operators are:<br />
+                    <table style="border-width:0px">
+                        <tr><td>Equal</td><td>==</td></tr>
+                        <tr><td>Strict equal</td><td>===</td></tr>
+                        <tr><td>Not equal</td><td>!=</td></tr>
+                        <tr><td>Strict not equal</td><td>!==</td></tr>
+                        <tr><td>Greater than</td><td>&gt;</td></tr>
+                        <tr><td>Less than</td><td>&lt;</td></tr>
+                        <tr><td>Greater than or equal</td><td>&gt;=</td></tr>
+                        <tr><td>Less than or equal</td><td>&lt;=</td></tr>
+                    </table></li>
+                <li>The condidtional operator is often used with the comparison operator.  Two expressions are used with the conditional expression
+                     and one is executed depending on whether the conditional expression is true or false.  The syntax is:<br /><br />
+                     (value1 comparison operator value2) ?
+                     expression exeucted when comparison is true :
+                     expression executed when comparison is false;<br /><br />
+                     Value1 and value2 can be either variables or values.</li>            
+                <li>Logical operators are used to compare the results of two different comparisons.
+                    <ul>
+                        <li>The '&&' And operator is true when both commarisons are true; otherwise it is false. </li>
+                        <li>The '||' Or operator is true as long either comparison result is true and false only when both comparison results are false.</li>
+                        <li>The '!' Not operator reverses a comparison result.  Using the Not operator, a true result becomes false and a false result
+                            becomes true.</li>
+                    </ul></li> 
+                <li>String operators<br /><br />
+                    The only arithmetic operator that can be used with strings is the '+' operator.<br /><br />
+                    Numbers and strings can be used with the assignment operator.  The only compound assignment operator that can
+                    be used with string is the '+='.<br /><br />
+                    Numbers or strings can use the comparison operators.  When using strings, the letters are considered in alphabetical order,
+                    not the length of a string.  All uppercase letters are less than lowercase letters.  All numeric strings (numbers that are
+                    represented as text) are less than all letters.</li>
+                <li>Special operators are used for special purposes.  A few that you will use soon are:<br />
+                    <table style="border-width:0px">
+                        <tr><td>Property access</td><td>.</td><td>appends an object, method, or property to another object</td></tr>
+                        <tr><td>Array index</td><td>[]</td><td>Access an element of an array</td></tr>
+                        <tr><td>Parentheses</td><td>()</td><td>Used with a function to contain parameters.  Used in an expression to determine the
+                                order of operations.</td></tr>
+                        <tr><td>Comma</td><td>,</td><td>Used to separate parameters in a parameter list,</td></tr>
+                    </table></li>
+                <li>Data type operator returns the data type of a variable.  Syntax:<br />
+                    typeof(variableName);<br />
+                    <table style="border-width:0px">
+                        <tr><th>Return Value</th><th>Data type of identifier</th></tr>
+                        <tr><td>Number</td><td>Integers and floating point numbers</td></tr>
+                        <tr><td>String</td><td>Text strings</td></tr>
+                        <tr><td>Boolean</td><td>True or false</td></tr>
+                        <tr><td>Object</td><td>Objects, arrays, and null variables</td></tr>
+                        <tr><td>Function</td><td>Functons</td></tr>
+                        <tr><td>Undefined</td><td>Undefined variables</td></tr>
+                    </table>
+                </li>
+                <li>Operator Precedence is the order of operation that expressions are evaluated.  The order you learned in math applies,
+                    there are just more operators in JavaScript than you had in math.  When the operators are on the same level, then
+                    they are evaluated in the order that they appear left to right (or right to left depending on the operator).</li>
+            </ul></li>
+  </ol>
+
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>

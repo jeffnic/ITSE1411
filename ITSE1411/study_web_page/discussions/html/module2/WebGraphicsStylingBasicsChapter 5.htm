@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> Discussion Web Graphics Styling Basics Chapter 5 ITSE 1411--Beginning Web Programming</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link href="http://www.austincc.edu/jscholl/css/relassignmentStyles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+ <body>
+ <div id="leftHeading">
+       ITSE 1411 Beginning Web <br />
+       Web Graphics Styling Basics Chapter 5  
+ </div>
+  
+ <div id="rightHeading">
+    <script src="http://www.austincc.edu/jscholl/lastUpdated.js" type="text/javascript"></script>
+ </div>
+ 
+<div id="barImage">
+    <img src="http://www.austincc.edu/jscholl/indexImages/rulerslice.gif" alt="" />
+</div>   
+<div class="clearfloats"></div>
+<div id="pageContent">
+
+<div class="clearfloats"></div>
+<div class="leftColumn">Discussion</div>
+<div class="clearfloats"></div>
+
+<div class="rightColumn">
+      <ol>
+         <li>Web Graphics
+      <ul>
+        <li>Graphics add interest to a page.  However, some users choose not to display graphics.
+            This includes visually impaired as well as users of hand held devices.</li>    
+        <li>Graphic formats used on the web
+          <ul>
+            <li>GIF images best used for flat line drawings containing mostly solid tones and simple images, like
+                clip art.  An animated gif consists of several images that are each slightly different.  A gif
+                image can also be transparent so that you can overlay images and see the background of the
+                image underneath.</li>
+            <li>JPEG images best used for photographs.  They cannot be transparent or animated.  </li>
+            <li>PNG images combine aspects of both gif and jpeg images.  A png image cannot be used for 
+                animation but does support transparency.</li>
+            <li>WebP images are a new format offered by Google that has improved compression and smaller image file sizes but is not
+                yet ready for commercial websites.  Currently only supported by Google Chrome.</li>
+          </ul></li>
+        <li>To help speed up download, designers sometimes post a thumbnail, which is a smaller image that
+            links to a larger image.</li>
+        <li>An image is displayed using the &lt;img&gt; tag.  If no height or width is designated, the image 
+            displays the actual size of the image.  You can change the height and width, but make sure you
+            make the change proportional; meaning a 2-inch x 3-inch image can be displayed as 1-inch x 1.5-inches.</li>
+                <li>img tag
+                  <ul>
+                    <li>Embeds an image in a web page.</li>
+                    <li>Requires the attributes src and alt.</li>
+                    <li>The src attribute gives the source or location of the image.</li>
+                    <li>The alt attribute contains text, which is read by page reading software and displayed when
+                        images do not display.</li>
+                    <li>Self-closing in XHTML not in HTML5.</li>
+                  </ul></li>
+      </ul></li>
+        <li>Images can be used as a hyperlink.  This is used in the validation.js file
+          <ul>
+            <li>Explanation of validation.js
+              <ul>
+                <li>Open validation.js from your module 0 folder in Komodo Edit.</li>
+                <li>The validation.js document is an external script that you will link to on every html page you
+                    create this semester.  This code is included to help you validate your code easily
+                    after upload.  It also makes it possible for me to grade accurately.</li>
+                <li>The code consists of 2 document.write() instructions.
+                  <ul>
+                    <li>The string inside the first instruction starts with the table, table row, and
+                        table data item tags.  Inside the table data item tag is a style, which is used to
+                        format the text.  </li>
+                    <li>Since the line is so long, the line ends with a quote to close the string.  The
+                        next line has a "+" to concatenate the string (meaning to keep building the string).</li>
+                  </ul></li>
+              </ul></li>
+          </ul></li>
+        <li>Background Images
+          <ul>
+            <li>Configure the background images using the background-image property.  For example:<br />
+                body { background-image: url(texture1.png); }</li>
+            <li>Control the background image by using the background-repeat property.  Otherwise, the default
+                is for the background to tile the background image to fill the page.</li>
+            <li>Position the background image to override the default top left location using the 
+                background-position property.</li>
+            <li>CSS3 Multiple Background Images is still in the recommended stage.
+                <ul>
+                  <li>Use CSS3 background property to configure multiple background images.  Each image is separated by a comma.</li>
+                  <li>Progressive Enhancement suggests that you configure a separate background-image property prior to the background
+                      property configured for multiple images.  This gives the user a background image when the user's browser does not
+                      support multiple background images.</li>
+                </ul></li>
+            <li>The Favorites Icon (favicon) - image associated with a web page showing in the address bar.
+                <ul>
+                  <li>In the past it had to be configured using the name favicon.ico file in the root directory of you your server.</li>
+                  <li>Now, you can use the link tag in the head section of a page to associate a favorites icon.  Example:<br />
+                      &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;  This is still somewhat "buggy" in Internet Explorer.  Firefox
+                      also supports gif and png image formats (but if the other browsers don't I do no recommend using these yet).</li>
+                </ul></li>
+            <li>Configure List Markers with CSS
+                <ul>
+                  <li>The default for an unordered list is a disc marker (bullet).  The default display for an ordered list is a decimal number.</li>
+                  <li>The CSS properties for list markers are listed in Table 5.3 of the text:
+                      <ul>
+                        <li>list-style-type</li>
+                        <li>list-style-image</li>
+                        <li>list-style-position</li>
+                      </ul></li>
+                </ul></li>
+            <li>Image Maps
+               <ul>   
+                  <li>An image map uses an image for navigation. See <a href="http://www.w3schools.com/tags/tag_map.asp">
+                      W3schools Image Map Tutorial</a>. To create an image map, the image is divided into areas
+                      called hot zones.  When the hot zone is clicked (or hovered) the associated URL with the hot zone is linked.</li>
+                  <li>The usemap attribute refers to the name used in the map tag.</li>
+                  <li>The area tag describes the shape of the hot zone.</li>
+                  <li>To create a hot spot, you must know the coordinates of the area for each hot spot. You
+                      might have image software to help with this, but if you do not, you can find the coordinates
+                      you need using the ismap attribute.
+                      <ul>
+                        <li>The ismap attribute is used to create a graphically active element of the img element.</li>    
+                        <li>Create this simple html document using the ismap attribute. 
+                            Open it in your browser. It will be displayed as if it is an image map. 
+                            When you move your mouse over it, the x &amp; y coordinates will be 
+                            displayed in the status line of the browser.  This page is used only to find the hot spots. It 
+                            does not validate because it is only being used as a development page. This
+                            is not the page you create for your image map.<br />
+                              &lt;html&gt;<br />
+                              &lt;head&gt;<br />
+                              &lt;title&gt;<br />
+                              Page Title<br />
+                              &lt;/title&gt;<br />
+                              &lt;/head&gt; 
+                              &lt;body&gt;<br />
+                              &lt;a href="#"&gt;<br />
+                              &lt;img src="TexasMap.jpg" height="400" width="400" ismap /&gt;<br />
+                              &lt;/a&gt;<br />
+                              &lt;/body&gt;<br />
+                              &lt;/html&gt;</li>
+                     </ul></li>
+                  <li>If you wish to create an ismap (not for viewing, for finding the coordinates) use the following steps:
+                     <ul>
+                        <li>Use the following map, my code to display this map is<br />
+                            &lt;img src="TexasMap.jpg" height="400" width="400" <br /> 
+                            alt="Texas Map, used with permission &copy; AAA Cooper Transportation"<br /> 
+                            <img src="TexasMap.jpg" height="400" width="400" 
+                            alt="Texas Map, used with permission &copy; AAA Cooper Transportation" /></li>
+                        <li>Create a page using ismap (or use image software) to find the coordinates for the cities marked with the red dots.</li>
+                        <li>Once you have found the coordinates that you want to use as hot spots, the usemap is used to indicate that the image is an
+                            image map.  Usemap format:<br />
+                            &lt; img usemap="#texas" src="https://acconline.austincc.edu/bbcswebdav/courses/template-ITSE1411/Discussion%20Notes%20HTML/TexasMap.jpg" alt="Map of Texas" width="400" height="400" /&gt;
+                            Create a page using usemap to link to a page with info about that city. (Any page you find on the web is fine
+                            as long as it is obviously about that city.)
+                           <ul>
+                              <li>You need the map element to identify the map being used.  The map element must use the same name and id
+                                  as the usemap name.  Map format:<br />
+                                  &lt;map id="texas" name="texas"&gt;</li>
+                              <li>The area element is nested in the map element and defines a hot spot on an image map.  
+                                  The shape attribute specifies whether the hot spot
+                                  is a circle, rectangle, or polygon.  The coords attribute gives the coordinates of the shape.Be sure and use every shape and make the hot spot big enough for the user to easily click.  If it is too
+                                  small the user has to be too accurate on finding the hot spot.
+                                  <ul>
+                                    <li>circle -- requires the x and y coordinates of the center of the hot spot as well as the radius of the circle.  Circle format:<br />
+                                        &lt;area shape="circle" coords="xCenter, yCenter, radius" href="Dallas.htm" alt="link to Dallas" /&gt;<br /></li>
+                                    <li>rect -- requires an x and y coordinate for one corner of the rectangle and an x and y coordinate for the diagonal corner of
+                                        the rectangle.  Rectangle format: <br />
+                                        &lt;area shape="rect" coords="upperLeftX, upperLeftY, lowerRightX, lowerRightY" href="Austin.htm" alt="link to Austin" /&gt;<br /></li>
+                                    <li>poly -- uses as many x and y coordinate pairs as needed to define a shape.  Polygon format:
+                                        &lt;area shape="poly" coords="firstPointX, firstPointY, secondPointX, secondPointY, ..."<br />
+                                        alt="link to El Paso " /&gt;</li>
+                                 </ul></li>
+                              <li>After you have named each area, you must close the map element.</li>
+                              <li>Your link should open a new window.  <br />
+                                  onclick="window.open(this.href,'_blank');return false;"</li>
+                           </ul></li>
+                     </ul></li>
+               </ul></li>
+          </ul></li>
+      </ol>
+</div>
+<div class="clearfloats"></div>
+
+
+</div>
+</body>
+</html>
