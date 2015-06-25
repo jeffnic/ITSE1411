@@ -85,6 +85,17 @@
                 document.forms[0].journals.remove(selectedItem);
         }
         
+        function changeJournal() {
+            var selectedItem = document.forms[0].journals.selectedIndex;
+            if (selectedItem == -1)
+                window.alert("You must select a journal name in the list.");
+            else {
+                document.forms[0].journals.options[selectedItem].value = document.forms[0].elements[31].value;
+                document.forms[0].journals.options[selectedItem].text = document.forms[0].elements[31].value;
+            }
+        
+        }
+        
         /* ]] */ 
     </script>
     
@@ -259,9 +270,9 @@
                         
                         <p>Journal <input type="text" size="68" /></p>
                         <p><input type="button" value="Add Journal" onclick="addJournal();" style="width: 120px" />
-                        <input type="button" value="Delete Journal" onclick="deleteJournal();" style="width: 120px" /><input type="button"
-                        value="Clear List" onclick="document.forms[0].journals.options.length = 0;"
-                        style="width: 120px" /></p>
+                        <input type="button" value="Delete Journal" onclick="deleteJournal();" style="width: 120px" />
+                        <input type="button" value="Change Journal" onclick="changeJournal();" style="width: 120px" />
+                        <input type="button" value="Clear List" onclick="document.forms[0].journals.options.length = 0;" style="width: 120px" /></p>
                         <p><select name="journals" multiple="multiple" size="10" style="width: 500px">
                             <option value="none">Enter the technologies journals you subscribe to</option>
                         </select></p>

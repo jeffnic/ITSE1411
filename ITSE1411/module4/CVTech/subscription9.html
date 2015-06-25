@@ -85,6 +85,31 @@
                 document.forms[0].journals.remove(selectedItem);
         }
         
+        function changeJournal() {
+            var selectedItem = document.forms[0].journals.selectedIndex;
+            if (selectedItem == -1)
+                window.alert("You must select a journal name in the list.");
+            else {
+                document.forms[0].journals.options[selectedItem].value = document.forms[0].elements[31].value;
+                document.forms[0].journals.options[selectedItem].text = document.forms[0].elements[31].value;
+            }
+        
+        }
+        
+        function confirmSubmit() {
+            var submitForm = window.confirm("Are you sure you want to submit the form?");
+            if (submitForm == true)
+                return true;
+            return false;
+        }
+        
+        function confirmReset() {
+            var resetForm = window.confirm("Are you sure you want to reset the form?");
+            if (resetForm == true)
+                return true;
+            return false;
+        }
+        
         /* ]] */ 
     </script>
     
@@ -171,7 +196,7 @@
                     <!--[Add code here]-->
                     <h1>Technology Journal Subscription Form</h1>
                     <h2>Customer Information</h2>
-                    <form action="FormProcessor.html" method="get" enctype="application/x-www-form-urlencoded">
+                    <form action="FormProcessor.html" method="get" enctype="application/x-www-form-urlencoded" onsubmit="return confirmSubmit();" onreset="return confirmReset()">
                         
                         <table border="0">
                             <tr>
@@ -259,9 +284,9 @@
                         
                         <p>Journal <input type="text" size="68" /></p>
                         <p><input type="button" value="Add Journal" onclick="addJournal();" style="width: 120px" />
-                        <input type="button" value="Delete Journal" onclick="deleteJournal();" style="width: 120px" /><input type="button"
-                        value="Clear List" onclick="document.forms[0].journals.options.length = 0;"
-                        style="width: 120px" /></p>
+                        <input type="button" value="Delete Journal" onclick="deleteJournal();" style="width: 120px" />
+                        <input type="button" value="Change Journal" onclick="changeJournal();" style="width: 120px" />
+                        <input type="button" value="Clear List" onclick="document.forms[0].journals.options.length = 0;" style="width: 120px" /></p>
                         <p><select name="journals" multiple="multiple" size="10" style="width: 500px">
                             <option value="none">Enter the technologies journals you subscribe to</option>
                         </select></p>
